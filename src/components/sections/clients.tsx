@@ -40,21 +40,21 @@ export default function Clients() {
     {
       name: 'Jean Dupont',
       title: 'PDG, Innovate Corp',
-      avatar: 'https://i.pravatar.cc/150?img=1',
+      avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzU4NzA4MjUxfDA&ixlib=rb-4.1.0&q=80&w=1080',
       text: t('clients.testimonials.0.text'),
       rating: 5,
     },
     {
       name: 'Marie Martin',
       title: 'DGD, QuantumLeap',
-      avatar: 'https://i.pravatar.cc/150?img=2',
+      avatar: 'https://images.unsplash.com/photo-1479936343636-73da5e5c000c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NTg3MDgyNTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
       text: t('clients.testimonials.1.text'),
       rating: 5,
     },
     {
       name: 'Samuel Lee',
       title: 'CTO, Stellar Solutions',
-      avatar: 'https://i.pravatar.cc/150?img=3',
+      avatar: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzU4NzA4MjUxfDA&ixlib=rb-4.1.0&q=80&w=1080',
       text: t('clients.testimonials.2.text'),
       rating: 5,
     },
@@ -104,19 +104,19 @@ export default function Clients() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
-                    <Card key={index} className="flex flex-col">
+                    <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <CardHeader className="flex-row items-center gap-4">
-                             <Avatar>
-                                <AvatarImage src={testimonial.avatar} />
+                             <Avatar className="w-16 h-16">
+                                <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                                 <AvatarFallback>{testimonial.name.substring(0,2)}</AvatarFallback>
                             </Avatar>
                             <div>
-                                <p className="font-bold">{testimonial.name}</p>
+                                <p className="font-bold text-lg">{testimonial.name}</p>
                                 <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                             </div>
                         </CardHeader>
                         <CardContent className="flex-grow">
-                            <p className="text-muted-foreground">"{testimonial.text}"</p>
+                            <p className="text-muted-foreground italic">"{testimonial.text}"</p>
                         </CardContent>
                         <CardFooter>
                             <div className="flex gap-1">
