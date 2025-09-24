@@ -43,13 +43,13 @@ export default function Footer() {
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">{t('footer.contact.title')}</h3>
               <div className="mt-4 flex gap-4">
                 <Link href="#" aria-label="Twitter">
-                  <Twitter className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                  <Twitter className="h-6 w-6 text-primary hover:opacity-80 transition-colors" />
                 </Link>
                 <Link href="#" aria-label="LinkedIn">
-                  <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                  <Linkedin className="h-6 w-6 text-primary hover:opacity-80 transition-colors" />
                 </Link>
                 <Link href="#" aria-label="Facebook">
-                  <Facebook className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                  <Facebook className="h-6 w-6 text-primary hover:opacity-80 transition-colors" />
                 </Link>
               </div>
             </div>
