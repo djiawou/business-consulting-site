@@ -22,17 +22,17 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 p-4 animate-fade-in-up">
         <h1 className="text-5xl md:text-7xl font-headline font-bold text-shadow-lg">
-          Unlocking Potential, Driving Growth
+          Libérer le potentiel, stimuler la croissance
         </h1>
         <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
-          Your trusted partner in navigating the complexities of modern business. We deliver expert insights and transformative strategies.
+          Votre partenaire de confiance pour naviguer dans les complexités du monde des affaires moderne. Nous offrons des perspectives expertes et des stratégies transformatrices.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="#services">Our Services</Link>
+            <Link href="#services">Nos Services</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
-            <Link href="#contact">Contact Us</Link>
+            <Link href="#contact">Contactez-nous</Link>
           </Button>
         </div>
       </div>

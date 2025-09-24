@@ -27,10 +27,10 @@ import { useToast } from '@/hooks/use-toast';
 import { Spinner } from '@/components/ui/spinner';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
-  subject: z.string().min(5, { message: 'Subject must be at least 5 characters.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  name: z.string().min(2, { message: 'Le nom doit comporter au moins 2 caractères.' }),
+  email: z.string().email({ message: 'Veuillez saisir une adresse e-mail valide.' }),
+  subject: z.string().min(5, { message: 'Le sujet doit comporter au moins 5 caractères.' }),
+  message: z.string().min(10, { message: 'Le message doit comporter au moins 10 caractères.' }),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -60,7 +60,7 @@ export default function Contact() {
   useEffect(() => {
     if (state?.message) {
       toast({
-        title: state.success ? 'Success!' : 'Error',
+        title: state.success ? 'Succès !' : 'Erreur',
         description: state.message,
         variant: state.success ? 'default' : 'destructive',
       });
@@ -74,16 +74,16 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-secondary">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">Get In Touch</h2>
+          <h2 className="text-4xl font-headline font-bold text-primary">Contactez-nous</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            We're here to help. Reach out to us for a consultation or to learn more about our services.
+            Nous sommes là pour vous aider. Contactez-nous pour une consultation ou pour en savoir plus sur nos services.
           </p>
         </div>
         <Card>
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2">
               <div className="p-8 md:p-12">
-                <h3 className="text-2xl font-bold font-headline mb-6">Contact Us</h3>
+                <h3 className="text-2xl font-bold font-headline mb-6">Écrivez-nous</h3>
                 <Form {...form}>
                   <form action={formAction} className="space-y-6">
                     <FormField
@@ -91,9 +91,9 @@ export default function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Full Name</FormLabel>
+                          <FormLabel>Nom complet</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="Jean Dupont" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -104,9 +104,9 @@ export default function Contact() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email Address</FormLabel>
+                          <FormLabel>Adresse e-mail</FormLabel>
                           <FormControl>
-                            <Input placeholder="you@example.com" {...field} />
+                            <Input placeholder="vous@exemple.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -117,9 +117,9 @@ export default function Contact() {
                       name="subject"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Subject</FormLabel>
+                          <FormLabel>Sujet</FormLabel>
                           <FormControl>
-                            <Input placeholder="Regarding..." {...field} />
+                            <Input placeholder="Concernant..." {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -132,25 +132,25 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Message</FormLabel>
                           <FormControl>
-                            <Textarea placeholder="Your message here..." {...field} rows={5} />
+                            <Textarea placeholder="Votre message ici..." {...field} rows={5} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? <Spinner /> : 'Send Message'}
+                      {isSubmitting ? <Spinner /> : 'Envoyer le message'}
                     </Button>
                   </form>
                 </Form>
               </div>
               <div className="bg-primary text-primary-foreground p-8 md:p-12 flex flex-col justify-between rounded-r-lg">
                 <div>
-                  <h3 className="text-2xl font-bold font-headline mb-6">Our Information</h3>
+                  <h3 className="text-2xl font-bold font-headline mb-6">Nos Coordonnées</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <MapPin className="w-6 h-6" />
-                      <span>123 Business Rd, Suite 100, New York, NY 10001</span>
+                      <span>123 Rue du Commerce, Bureau 100, Paris, 75001</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <Phone className="w-6 h-6" />

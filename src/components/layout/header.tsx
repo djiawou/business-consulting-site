@@ -3,17 +3,18 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, Mountain, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { Logo } from '../logo';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
+  { href: '#about', label: 'À Propos' },
   { href: '#expertise', label: 'Expertise' },
   { href: '#services', label: 'Services' },
   { href: '#clients', label: 'Clients' },
   { href: '#contact', label: 'Contact' },
-  { href: '/image-generator', label: 'AI Tools' },
+  { href: '/image-generator', label: 'Outils IA' },
 ];
 
 export default function Header() {
@@ -39,7 +40,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Mountain className="h-8 w-8 text-primary" />
+          <Logo className="h-8 w-8 text-primary" />
           <span className="text-2xl font-bold font-headline text-primary">
             Apex Insights
           </span>

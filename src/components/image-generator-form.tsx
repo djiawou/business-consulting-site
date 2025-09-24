@@ -28,8 +28,8 @@ import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
 
 const formSchema = z.object({
-  prompt: z.string().min(10, { message: 'Prompt must be at least 10 characters.' }),
-  mediaType: z.enum(['image', 'video'], { required_error: 'You must select a media type.' }),
+  prompt: z.string().min(10, { message: 'Le prompt doit contenir au moins 10 caractères.' }),
+  mediaType: z.enum(['image', 'video'], { required_error: 'Vous devez sélectionner un type de média.' }),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -43,7 +43,7 @@ export default function ImageGeneratorForm() {
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      prompt: 'A diverse team of business professionals in a modern, sunlit office, collaborating around a sleek conference table. The style is cinematic and optimistic.',
+      prompt: 'Une équipe diversifiée de professionnels dans un bureau moderne et ensoleillé, collaborant autour d\'une table de conférence élégante. Le style est cinématographique et optimiste.',
       mediaType: 'image',
     },
   });
@@ -59,17 +59,17 @@ export default function ImageGeneratorForm() {
         setMediaResult(result.media);
         setGeneratedMediaType(data.mediaType);
         toast({
-            title: 'Generation Complete!',
-            description: `Your ${data.mediaType} has been successfully generated.`
+            title: 'Génération terminée !',
+            description: `Votre ${data.mediaType === 'image' ? 'image' : 'vidéo'} a été générée avec succès.`
         })
       } else {
-        throw new Error('The AI did not return any media.');
+        throw new Error('L\'IA n\'a retourné aucun média.');
       }
     } catch (error) {
-      console.error('Error generating media:', error);
+      console.error('Erreur lors de la génération du média:', error);
       toast({
-        title: 'Generation Failed',
-        description: error instanceof Error ? error.message : 'An unknown error occurred.',
+        title: 'La génération a échoué',
+        description: error instanceof Error ? error.message : 'Une erreur inconnue est survenue.',
         variant: 'destructive',
       });
     } finally {
@@ -87,16 +87,16 @@ export default function ImageGeneratorForm() {
               name="prompt"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-lg font-semibold">Your Vision</FormLabel>
+                  <FormLabel className="text-lg font-semibold">Votre Vision</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="e.g., A dynamic shot of a consultant presenting a growth chart..."
+                      placeholder="Ex: Un plan dynamique d'un consultant présentant un graphique de croissance..."
                       rows={4}
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    Describe the image or video you want to create in detail.
+                    Décrivez en détail l'image ou la vidéo que vous souhaitez créer.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -107,7 +107,7 @@ export default function ImageGeneratorForm() {
               name="mediaType"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel className="text-lg font-semibold">Media Type</FormLabel>
+                  <FormLabel className="text-lg font-semibold">Type de Média</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -124,7 +124,7 @@ export default function ImageGeneratorForm() {
                         <FormControl>
                           <RadioGroupItem value="video" />
                         </FormControl>
-                        <FormLabel className="font-normal">Video (may take up to a minute)</FormLabel>
+                        <FormLabel className="font-normal">Vidéo (peut prendre jusqu'à une minute)</FormLabel>
                       </FormItem>
                     </RadioGroup>
                   </FormControl>
@@ -136,21 +136,21 @@ export default function ImageGeneratorForm() {
               {isLoading ? (
                 <>
                   <Spinner className="mr-2 h-4 w-4" />
-                  Generating...
+                  Génération en cours...
                 </>
               ) : (
-                'Generate Media'
+                'Générer le média'
               )}
             </Button>
           </form>
         </Form>
         {(isLoading || mediaResult) && (
             <div className="mt-8">
-                <h3 className="text-lg font-semibold mb-4">Result</h3>
+                <h3 className="text-lg font-semibold mb-4">Résultat</h3>
                 <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
                     {isLoading ? <Spinner className="w-12 h-12 text-primary" /> : null}
                     {mediaResult && generatedMediaType === 'image' && (
-                        <Image src={mediaResult} alt="Generated corporate image" width={1280} height={720} className="rounded-lg object-contain"/>
+                        <Image src={mediaResult} alt="Image d'entreprise générée" width={1280} height={720} className="rounded-lg object-contain"/>
                     )}
                     {mediaResult && generatedMediaType === 'video' && (
                         <video src={mediaResult} controls autoPlay loop className="rounded-lg w-full h-full"/>

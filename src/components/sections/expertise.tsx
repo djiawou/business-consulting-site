@@ -4,13 +4,13 @@ import { BrainCircuit, IterationCw } from 'lucide-react';
 const expertiseAreas = [
   {
     icon: <BrainCircuit className="w-16 h-16 text-primary icon-glow" />,
-    title: 'Strategic Advice',
-    description: 'We provide actionable, data-driven strategies to navigate market complexities and seize growth opportunities.',
+    title: 'Conseil Stratégique',
+    description: 'Nous fournissons des stratégies concrètes et basées sur les données pour naviguer dans les complexités du marché et saisir les opportunités de croissance.',
   },
   {
     icon: <IterationCw className="w-16 h-16 text-primary icon-glow" />,
-    title: 'Digital Transformation',
-    description: 'Our experts guide you through every step of digitalization, from process automation to customer experience.',
+    title: 'Transformation Digitale',
+    description: 'Nos experts vous guident à chaque étape de la digitalisation, de l\'automatisation des processus à l\'expérience client.',
   },
   {
     icon: (
@@ -33,8 +33,8 @@ const expertiseAreas = [
         </svg>
       </div>
     ),
-    title: 'SAP Support',
-    description: 'Maximize your SAP investment with our comprehensive support, implementation, and optimization services.',
+    title: 'Support SAP',
+    description: 'Maximisez votre investissement SAP avec nos services complets de support, de mise en œuvre et d\'optimisation.',
   },
 ];
 
@@ -43,9 +43,9 @@ export default function Expertise() {
     <section id="expertise" className="py-24">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">Our Core Expertise</h2>
+          <h2 className="text-4xl font-headline font-bold text-primary">Notre Expertise Fondamentale</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Leveraging deep industry knowledge to deliver unparalleled results in key business domains.
+            Mettre à profit une connaissance approfondie du secteur pour obtenir des résultats inégalés dans des domaines clés.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-12 text-center">

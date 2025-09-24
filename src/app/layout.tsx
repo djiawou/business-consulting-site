@@ -19,7 +19,7 @@ const ptSans = PT_Sans({
 
 export const metadata: Metadata = {
   title: 'Apex Insights',
-  description: 'Unlocking Potential, Driving Growth.',
+  description: 'Libérer le potentiel, stimuler la croissance.',
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="fr" className="!scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

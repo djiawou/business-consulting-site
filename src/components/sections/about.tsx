@@ -10,18 +10,18 @@ export default function About() {
   const values = [
     {
       icon: <Eye className="w-8 h-8 text-primary" />,
-      title: 'Our Vision',
-      description: 'To be the leading catalyst for business transformation and sustainable growth globally.',
+      title: 'Notre Vision',
+      description: 'Être le catalyseur de référence pour la transformation des entreprises et la croissance durable à l’échelle mondiale.',
     },
     {
       icon: <Rocket className="w-8 h-8 text-primary" />,
-      title: 'Our Mission',
-      description: 'To empower organizations with innovative strategies and data-driven insights that unlock their full potential.',
+      title: 'Notre Mission',
+      description: 'Donner aux organisations les moyens de libérer leur plein potentiel grâce à des stratégies innovantes et des analyses basées sur les données.',
     },
     {
       icon: <Handshake className="w-8 h-8 text-primary" />,
-      title: 'Our Values',
-      description: 'Integrity, Excellence, and Partnership are the cornerstones of our client relationships.',
+      title: 'Nos Valeurs',
+      description: 'L\'intégrité, l\'excellence et le partenariat sont les piliers de nos relations avec nos clients.',
     },
   ];
 
@@ -30,10 +30,10 @@ export default function About() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-headline font-bold text-primary">
-            Pioneering Business Excellence
+            Pionniers de l'Excellence Commerciale
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Apex Insights was founded on the principle of delivering tangible results. We blend deep industry knowledge with a passion for innovation to solve our clients' most critical challenges.
+            Apex Insights a été fondé sur le principe de fournir des résultats tangibles. Nous combinons une connaissance approfondie de l'industrie avec une passion pour l'innovation afin de résoudre les défis les plus critiques de nos clients.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">

@@ -14,26 +14,26 @@ const services = [
   {
     id: 'service-management',
     icon: <Briefcase className="w-10 h-10 text-primary" />,
-    title: 'Management Consulting',
-    description: 'Tailored strategies to optimize operations, drive innovation, and enhance performance.',
+    title: 'Conseil en Management',
+    description: 'Des stratégies sur mesure pour optimiser les opérations, stimuler l\'innovation et améliorer la performance.',
   },
   {
     id: 'service-digitalization',
     icon: <Cpu className="w-10 h-10 text-primary" />,
-    title: 'Digitalization',
-    description: 'Integrating cutting-edge technology to modernize your business and create a digital-first culture.',
+    title: 'Digitalisation',
+    description: 'Intégrer des technologies de pointe pour moderniser votre entreprise et créer une culture numérique.',
   },
   {
     id: 'service-outsourcing',
     icon: <Users className="w-10 h-10 text-primary" />,
-    title: 'Outsourcing',
-    description: 'Strategic outsourcing solutions to increase efficiency, reduce costs, and access specialized talent.',
+    title: 'Externalisation',
+    description: 'Solutions d\'externalisation stratégiques pour accroître l\'efficacité, réduire les coûts et accéder à des talents spécialisés.',
   },
   {
     id: 'service-training',
     icon: <Presentation className="w-10 h-10 text-primary" />,
-    title: 'Corporate Training',
-    description: 'Customized training programs to upskill your workforce and foster a culture of continuous learning.',
+    title: 'Formation d\'Entreprise',
+    description: 'Programmes de formation personnalisés pour perfectionner votre personnel et favoriser une culture d\'apprentissage continu.',
   },
 ];
 
@@ -42,9 +42,9 @@ export default function Services() {
     <section id="services" className="py-24 bg-secondary">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">What We Offer</h2>
+          <h2 className="text-4xl font-headline font-bold text-primary">Ce que nous offrons</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive suite of services designed to address your most complex business challenges and drive sustainable growth.
+            Une gamme complète de services conçus pour relever vos défis commerciaux les plus complexes et favoriser une croissance durable.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
