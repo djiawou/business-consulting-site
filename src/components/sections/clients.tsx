@@ -21,16 +21,16 @@ import Image from 'next/image';
 
 
 const partners = [
-    { name: 'Innovate Corp', logo: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=400' },
-    { name: 'QuantumLeap', logo: 'https://images.unsplash.com/photo-1557864137-2929636454c5?q=80&w=400' },
-    { name: 'Stellar Solutions', logo: 'https://images.unsplash.com/photo-1549421257-a93c7219c636?q=80&w=400' },
-    { name: 'Nexus Group', logo: 'https://images.unsplash.com/photo-1553011388-3483b1b6c779?q=80&w=400' },
-    { name: 'Vertex Inc.', logo: 'https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?q=80&w=400' },
-    { name: 'Synergy Systems', logo: 'https://images.unsplash.com/photo-1522199895919-207908c69f7f?q=80&w=400' },
-    { name: 'GlobalTrust', logo: 'https://images.unsplash.com/photo-1521151636413-a43a34215283?q=80&w=400' },
-    { name: 'Pinnacle Corp', logo: 'https://images.unsplash.com/photo-1618218169123-afc3ea93a275?q=80&w=400' },
-    { name: 'Zenith Solutions', logo: 'https://images.unsplash.com/photo-1612550992286-a7541f379637?q=80&w=400' },
-    { name: 'FusionWorks', logo: 'https://images.unsplash.com/photo-1606166325413-a5dc53c1553a?q=80&w=400' }
+    { name: 'Innovate Corp', logo: '/logos/logo1.png' },
+    { name: 'QuantumLeap', logo: '/logos/logo2.png' },
+    { name: 'Stellar Solutions', logo: '/logos/logo3.png' },
+    { name: 'Nexus Group', logo: '/logos/logo4.png' },
+    { name: 'Vertex Inc.', logo: '/logos/logo5.png' },
+    { name: 'Synergy Systems', logo: '/logos/logo6.png' },
+    { name: 'GlobalTrust', logo: '/logos/logo7.png' },
+    { name: 'Pinnacle Corp', logo: '/logos/logo8.png' },
+    { name: 'Zenith Solutions', logo: '/logos/logo9.png' },
+    { name: 'FusionWorks', logo: '/logos/logo10.png' }
   ];
 
 export default function Clients() {
@@ -133,5 +133,3 @@ export default function Clients() {
     </section>
   );
 }
-
-    
