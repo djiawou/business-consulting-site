@@ -7,8 +7,7 @@
         "services": "Services",
         "events": "Événements",
         "clients": "Clients",
-        "contact": "Contact",
-        "image_generator": "Gén. Image"
+        "contact": "Contact"
     },
     "footer": {
         "tagline": "Libérer le potentiel, stimuler la croissance.",
