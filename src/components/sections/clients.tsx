@@ -21,16 +21,16 @@ import Image from 'next/image';
 
 
 const partners = [
-    { name: 'Innovate Corp', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'QuantumLeap', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'Stellar Solutions', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'Nexus Group', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'Vertex Inc.', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'Synergy Systems', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'GlobalTrust', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'Pinnacle Corp', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'Zenith Solutions', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
-    { name: 'FusionWorks', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' }
+    { name: 'Innovate Corp', logo: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=400' },
+    { name: 'QuantumLeap', logo: 'https://images.unsplash.com/photo-1557864137-2929636454c5?q=80&w=400' },
+    { name: 'Stellar Solutions', logo: 'https://images.unsplash.com/photo-1549421257-a93c7219c636?q=80&w=400' },
+    { name: 'Nexus Group', logo: 'https://images.unsplash.com/photo-1553011388-3483b1b6c779?q=80&w=400' },
+    { name: 'Vertex Inc.', logo: 'https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?q=80&w=400' },
+    { name: 'Synergy Systems', logo: 'https://images.unsplash.com/photo-1522199895919-207908c69f7f?q=80&w=400' },
+    { name: 'GlobalTrust', logo: 'https://images.unsplash.com/photo-1521151636413-a43a34215283?q=80&w=400' },
+    { name: 'Pinnacle Corp', logo: 'https://images.unsplash.com/photo-1618218169123-afc3ea93a275?q=80&w=400' },
+    { name: 'Zenith Solutions', logo: 'https://images.unsplash.com/photo-1612550992286-a7541f379637?q=80&w=400' },
+    { name: 'FusionWorks', logo: 'https://images.unsplash.com/photo-1606166325413-a5dc53c1553a?q=80&w=400' }
   ];
 
 export default function Clients() {
