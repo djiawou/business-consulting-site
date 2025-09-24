@@ -48,7 +48,7 @@ Un site vitrine moderne et animé pour une entreprise de conseil en stratégie b
 
 ```bash
 # Cloner le repository
-git clone https://github.com/votre-username/business-consulting-site.git
+git clone https://github.com/djiawou/business-consulting-site.git
 cd business-consulting-site
 
 # Installer les dépendances
