@@ -32,22 +32,10 @@
         "contactButton": "Contactez-nous"
     },
     "about": {
-        "title": "Pionniers de l'Excellence Commerciale",
-        "subtitle": "Apex Insights a été fondé sur le principe de fournir des résultats tangibles. Nous combinons une connaissance approfondie de l'industrie avec une passion pour l'innovation afin de résoudre les défis les plus critiques de nos clients.",
-        "values": {
-            "vision": {
-                "title": "Notre Vision",
-                "description": "Être le catalyseur de référence pour la transformation des entreprises et la croissance durable à l’échelle mondiale."
-            },
-            "mission": {
-                "title": "Notre Mission",
-                "description": "Donner aux organisations les moyens de libérer leur plein potentiel grâce à des stratégies innovantes et des analyses basées sur les données."
-            },
-            "values": {
-                "title": "Nos Valeurs",
-                "description": "L'intégrité, l'excellence et le partenariat sont les piliers de nos relations avec nos clients."
-            }
-        }
+        "title_new": "À propos",
+        "subtitle_new": "Notre raison d’être est de permettre aux entreprises de libérer leur potentiel de développement grâce à la transformation de leur Système d’Information.",
+        "paragraph_new": "Nous accompagnons la transformation et améliorons l’efficacité opérationnelle du Système d’Information SAP de nos clients à travers nos expertises : Cloud Technologie Services, Conseil et Intégration, Support et Expertise, Analytics, Data et BI et Customer Expérience. Nous nous engageons à offrir un service premium grâce à l’expertise de nos consultants, à notre méthodologie et aux relations de proximité que nous construisons avec nos clients.",
+        "contact_button": "En savoir plus"
     },
     "expertise": {
         "title": "Notre Expertise Fondamentale",

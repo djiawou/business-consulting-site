@@ -7,10 +7,10 @@
       "imageHint": "business meeting"
     },
     {
-      "id": "about-us",
-      "description": "A diverse team of professionals collaborating in a bright, modern office.",
-      "imageUrl": "https://images.unsplash.com/photo-1587614204968-68ba4b5e0be3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2xsYWJvcmF0aXZlJTIwdGVhbXxlbnwwfHx8fDE3NTg2OTA3NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "collaborative team"
+      "id": "about-us-new",
+      "description": "Abstract waves of light and data, representing digital transformation and information flow.",
+      "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMGRhcmslMjBibHVlfGVufDB8fHx8MTc1ODcwNTQ1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital transformation"
     },
     {
       "id": "contact-map",

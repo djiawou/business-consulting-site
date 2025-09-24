@@ -1,70 +1,45 @@
-'use client'
+'use client';
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card, CardContent } from '@/components/ui/card';
-import { Eye, Rocket, Handshake } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function About() {
-  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-us');
+  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-us-new');
   const { t } = useTranslation();
 
-  const values = [
-    {
-      icon: <Eye className="w-8 h-8 text-primary" />,
-      title: t('about.values.vision.title'),
-      description: t('about.values.vision.description'),
-    },
-    {
-      icon: <Rocket className="w-8 h-8 text-primary" />,
-      title: t('about.values.mission.title'),
-      description: t('about.values.mission.description'),
-    },
-    {
-      icon: <Handshake className="w-8 h-8 text-primary" />,
-      title: t('about.values.values.title'),
-      description: t('about.values.values.description'),
-    },
-  ];
-
   return (
-    <section id="about" className="py-24 bg-secondary">
+    <section id="about" className="overflow-hidden">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">
-            {t('about.title')}
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('about.subtitle')}
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            {values.map((value, index) => (
-              <div key={index} className="flex gap-6 items-start">
-                <div className="flex-shrink-0">{value.icon}</div>
-                <div>
-                  <h3 className="text-xl font-bold font-headline">{value.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{value.description}</p>
-                </div>
-              </div>
-            ))}
+        <div className="grid md:grid-cols-2 gap-0 items-center">
+          <div className="py-24 pr-8">
+            <h2 className="text-4xl font-headline font-bold text-primary mb-6">
+              {t('about.title_new')}
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {t('about.subtitle_new')}
+            </p>
+             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              {t('about.paragraph_new')}
+            </p>
+            <Button asChild size="lg" className="mt-8">
+                <Link href="#contact" className="flex items-center gap-2">
+                    {t('about.contact_button')} <ArrowRight />
+                </Link>
+            </Button>
           </div>
-          <div>
+          <div className="h-full min-h-[400px] md:min-h-0 relative">
             {aboutImage && (
-              <Card className="overflow-hidden shadow-2xl">
-                <CardContent className="p-0">
-                  <Image
+                <Image
                     src={aboutImage.imageUrl}
                     alt={aboutImage.description}
-                    width={800}
-                    height={600}
-                    className="object-cover w-full h-full"
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-105"
                     data-ai-hint={aboutImage.imageHint}
-                  />
-                </CardContent>
-              </Card>
+                />
             )}
           </div>
         </div>
