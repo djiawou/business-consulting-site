@@ -85,23 +85,23 @@
             },
             "sap_expertise": {
                 "title": "SAP Expertise",
-                "description": "Our certified SAP consultants optimize your existing modules, implement new functionalities, and ensure the performance of your SAP ecosystem."
+                "description": "Benefit from our SAP expertise to maximize operational efficiency and return on investment."
             },
             "support": {
                 "title": "Assistance and Support",
-                "description": "Responsive technical and functional support to ensure the continuity of your operations. We offer 24/7 assistance to quickly resolve all your incidents."
+                "description": "We offer top-quality assistance and maintenance for your SAP system with our experts."
             },
             "training": {
                 "title": "Training",
-                "description": "Customized training programs for your teams to maximize tool adoption and improve productivity. Online or on-site sessions."
+                "description": "We offer custom training adapted to your needs, as well as project-based training for your teams."
             },
             "strategy": {
                 "title": "Business Consulting and Strategy",
-                "description": "We help you define a clear vision and a strategic roadmap to align your technology with your business goals and drive growth."
+                "description": "We provide strategic advice on transforming their information system to achieve their goals."
             },
             "digital_transformation": {
                 "title": "Digital Transformation",
-                "description": "End-to-end support in your digital transformation, from the initial audit to the implementation of innovative solutions to digitize your business processes."
+                "description": "Entrust the full-cycle implementation of your software product to our experienced BAs, UI/UX designers, and developers."
             }
         }
     },

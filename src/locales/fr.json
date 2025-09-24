@@ -85,23 +85,23 @@
             },
             "sap_expertise": {
                 "title": "Expertise SAP",
-                "description": "Nos consultants certifiés SAP optimisent vos modules existants, implémentent de nouvelles fonctionnalités et assurent la performance de votre écosystème SAP."
+                "description": "Bénéficiez de notre expertise SAP pour maximiser l'efficacité opérationnelle et le retour sur investissement."
             },
             "support": {
                 "title": "Assistance et Support",
-                "description": "Un support technique et fonctionnel réactif pour garantir la continuité de vos opérations. Nous offrons une assistance 24/7 pour résoudre rapidement tous vos incidents."
+                "description": "Nous vous proposons une assistance et une maintenance de qualité supérieure pour votre système SAP avec nos experts."
             },
             "training": {
                 "title": "Formation",
-                "description": "Programmes de formation sur mesure pour vos équipes afin de maximiser l'adoption des outils et d'améliorer la productivité. Sessions en ligne ou sur site."
+                "description": "Nous vous proposons des Formations sur mesure adaptées à vos besoins, mais aussi des formations Projets adaptées à vos équipes."
             },
             "strategy": {
                 "title": "Conseils et Stratégie d'entreprise",
-                "description": "Nous vous aidons à définir une vision claire et une feuille de route stratégique pour aligner votre technologie sur vos objectifs commerciaux et stimuler la croissance."
+                "description": "Nous fournissons des conseils stratégiques sur la transformation de leur système d'information pour atteindre leurs objectifs."
             },
             "digital_transformation": {
                 "title": "Transformation Digitale",
-                "description": "Accompagnement de A à Z dans votre transformation numérique, de l'audit initial à la mise en œuvre de solutions innovantes pour digitaliser vos processus métier."
+                "description": "Confiez la mise en œuvre complète de votre produit logiciel à nos BA, concepteurs UI/UX et développeurs expérimentés."
             }
         }
     },
