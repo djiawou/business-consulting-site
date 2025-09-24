@@ -88,7 +88,7 @@ export default function Services() {
                         {String(index + 1).padStart(2, '0')}
                     </span>
                   <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
-                  <p className="text-primary-foreground/90 mb-4">{service.description}</p>
+                  <p className="text-primary-foreground/90 mb-4 font-headline">{service.description}</p>
                    <a href="#" className="mt-auto flex items-center gap-2 text-sm font-semibold text-green-400 hover:underline" onClick={(e) => e.preventDefault()}>
                       Voir plus <ArrowRight className="w-5 h-5 text-green-400"/>
                    </a>
