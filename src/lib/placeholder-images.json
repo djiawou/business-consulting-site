@@ -57,7 +57,7 @@
     {
       "id": "expertise-sap-modules",
       "description": "An overview of SAP ERP modules in a circular diagram.",
-      "imageUrl": "https://images.unsplash.com/photo-1688632001579-3d17d52a2b00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtaW5kbWFwJTIwZGlhZ3JhbXxlbnwwfHx8fDE3MjE4MzQ5MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "/expertise/sap-modules.png",
       "imageHint": "SAP diagram"
     }
   ]
