@@ -1,6 +1,6 @@
 
 import type { Metadata } from 'next';
-import { Playfair_Display, PT_Sans } from 'next/font/google';
+import { Playfair_Display, Open_Sans } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
   variable: '--font-headline',
 });
 
-const ptSans = PT_Sans({
+const openSans = Open_Sans({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-body',
@@ -36,7 +36,7 @@ export default function RootLayout({
         className={cn(
           'min-h-screen bg-background font-body antialiased',
           playfair.variable,
-          ptSans.variable
+          openSans.variable
         )}
       >
         {children}
