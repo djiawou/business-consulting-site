@@ -21,7 +21,7 @@
     {
       "id": "service-sap-migration",
       "description": "Cloud servers and data streams, representing SAP migration to the cloud.",
-      "imageUrl": "https://images.unsplash.com/photo-1671543307135-10844f5e9a55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbG91ZCUyMG1pZ3JhdGlvbnxlbnwwfHx8fDE3NTg2OTI3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/services/cloud-computing.jpg",
       "imageHint": "cloud migration"
     },
     {

@@ -66,13 +66,13 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-background/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-sm',
+        isScrolled ? 'shadow-md' : ''
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8" />
+          <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} />
           <span className="text-2xl font-bold font-headline text-primary">
             Branding Consulting
           </span>
