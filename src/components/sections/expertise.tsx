@@ -1,51 +1,55 @@
-
+'use client'
 import { BrainCircuit, IterationCw } from 'lucide-react';
+import { useTranslation } from '@/hooks/use-translation';
 
-const expertiseAreas = [
-  {
-    icon: <BrainCircuit className="w-16 h-16 text-primary icon-glow" />,
-    title: 'Conseil Stratégique',
-    description: 'Nous fournissons des stratégies concrètes et basées sur les données pour naviguer dans les complexités du marché et saisir les opportunités de croissance.',
-  },
-  {
-    icon: <IterationCw className="w-16 h-16 text-primary icon-glow" />,
-    title: 'Transformation Digitale',
-    description: 'Nos experts vous guident à chaque étape de la digitalisation, de l\'automatisation des processus à l\'expérience client.',
-  },
-  {
-    icon: (
-      <div className="w-16 h-16 flex items-center justify-center icon-glow">
-        <svg
-          className="w-14 h-14 text-primary"
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M85 15H15C11.6863 15 9 17.6863 9 21V79C9 82.3137 11.6863 85 15 85H85C88.3137 85 91 82.3137 91 79V21C91 17.6863 88.3137 15 85 15Z"
-            stroke="currentColor"
-            strokeWidth="5"
-          />
-          <path
-            d="M28.4 67.4V46.72L36.16 32.6H47.44L55.24 46.72V67.4H47.08V51.28L46.48 48.94H37.12L36.52 51.28V67.4H28.4ZM60.295 67.4V32.6H68.455V67.4H60.295Z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
-    ),
-    title: 'Support SAP',
-    description: 'Maximisez votre investissement SAP avec nos services complets de support, de mise en œuvre et d\'optimisation.',
-  },
-];
 
 export default function Expertise() {
+    const { t } = useTranslation();
+
+    const expertiseAreas = [
+        {
+          icon: <BrainCircuit className="w-16 h-16 text-primary icon-glow" />,
+          title: t('expertise.areas.strategic.title'),
+          description: t('expertise.areas.strategic.description'),
+        },
+        {
+          icon: <IterationCw className="w-16 h-16 text-primary icon-glow" />,
+          title: t('expertise.areas.digital.title'),
+          description: t('expertise.areas.digital.description'),
+        },
+        {
+          icon: (
+            <div className="w-16 h-16 flex items-center justify-center icon-glow">
+              <svg
+                className="w-14 h-14 text-primary"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M85 15H15C11.6863 15 9 17.6863 9 21V79C9 82.3137 11.6863 85 15 85H85C88.3137 85 91 82.3137 91 79V21C91 17.6863 88.3137 15 85 15Z"
+                  stroke="currentColor"
+                  strokeWidth="5"
+                />
+                <path
+                  d="M28.4 67.4V46.72L36.16 32.6H47.44L55.24 46.72V67.4H47.08V51.28L46.48 48.94H37.12L36.52 51.28V67.4H28.4ZM60.295 67.4V32.6H68.455V67.4H60.295Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          ),
+          title: t('expertise.areas.sap.title'),
+          description: t('expertise.areas.sap.description'),
+        },
+      ];
+
   return (
     <section id="expertise" className="py-24">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">Notre Expertise Fondamentale</h2>
+          <h2 className="text-4xl font-headline font-bold text-primary">{t('expertise.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Mettre à profit une connaissance approfondie du secteur pour obtenir des résultats inégalés dans des domaines clés.
+            {t('expertise.subtitle')}
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-12 text-center">

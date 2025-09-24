@@ -3,19 +3,37 @@
 
 import * as z from 'zod';
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Le nom doit comporter au moins 2 caractères.' }),
-  email: z.string().email({ message: 'Veuillez saisir une adresse e-mail valide.' }),
-  subject: z.string().min(5, { message: 'Le sujet doit comporter au moins 5 caractères.' }),
-  message: z.string().min(10, { message: 'Le message doit comporter au moins 10 caractères.' }),
+const createFormSchema = (t) => z.object({
+  name: z.string().min(2, { message: t('contact.form.errors.name') }),
+  email: z.string().email({ message: t('contact.form.errors.email') }),
+  subject: z.string().min(5, { message: t('contact.form.errors.subject') }),
+  message: z.string().min(10, { message: t('contact.form.errors.message') }),
 });
+
 
 type State = {
   message: string;
   success: boolean;
+  lang: 'fr' | 'en';
 };
 
+// Helper to get translations on the server
+async function getTranslations(lang: 'fr' | 'en') {
+  if (lang === 'en') {
+    return (await import('@/locales/en.json')).default;
+  }
+  return (await import('@/locales/fr.json')).default;
+}
+
 export async function submitContactForm(prevState: State, formData: FormData): Promise<State> {
+  const lang = (formData.get('lang') as ('fr' | 'en')) || 'fr';
+  const translations = await getTranslations(lang);
+  
+  // This is a helper to get nested keys, e.g., t('contact.form.errors.name')
+  const t = (key: string) => key.split('.').reduce((obj, k) => (obj as any)?.[k], translations);
+
+  const formSchema = createFormSchema(t);
+
   const name = formData.get('name') as string;
   const email = formData.get('email') as string;
   const subject = formData.get('subject') as string;
@@ -29,9 +47,11 @@ export async function submitContactForm(prevState: State, formData: FormData): P
   });
 
   if (!validatedFields.success) {
+    const firstError = Object.values(validatedFields.error.flatten().fieldErrors)[0]?.[0];
     return {
-      message: 'Une erreur est survenue lors de votre soumission. Veuillez vérifier les champs.',
+      message: firstError || t('contact.form.errors.generic'),
       success: false,
+      lang,
     };
   }
   
@@ -43,7 +63,8 @@ export async function submitContactForm(prevState: State, formData: FormData): P
   await new Promise(resolve => setTimeout(resolve, 1000));
 
   return {
-    message: 'Merci pour votre message ! Nous vous recontacterons sous peu.',
+    message: t('contact.form.success'),
     success: true,
+    lang,
   };
 }

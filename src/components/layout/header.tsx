@@ -1,24 +1,32 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Logo } from '../logo';
-
-const navLinks = [
-  { href: '#about', label: 'À Propos' },
-  { href: '#expertise', label: 'Expertise' },
-  { href: '#services', label: 'Services' },
-  { href: '#clients', label: 'Clients' },
-  { href: '#contact', label: 'Contact' },
-];
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { useTranslation } from '@/hooks/use-translation';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, setLanguage, language } = useTranslation();
+
+  const navLinks = [
+    { href: '#about', label: t('header.about') },
+    { href: '#expertise', label: t('header.expertise') },
+    { href: '#services', label: t('header.services') },
+    { href: '#clients', label: t('header.clients') },
+    { href: '#contact', label: t('header.contact') },
+  ];
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,10 +63,28 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <div className="md:hidden">
-          <Button onClick={toggleMenu} variant="ghost" size="icon">
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+        <div className="flex items-center gap-2">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Globe className="h-6 w-6" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => setLanguage('fr')}>
+                Français
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setLanguage('en')}>
+                English
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <div className="md:hidden">
+            <Button onClick={toggleMenu} variant="ghost" size="icon">
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
       </div>
       {isMenuOpen && (

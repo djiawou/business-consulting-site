@@ -1,3 +1,4 @@
+'use client'
 
 import {
   Carousel,
@@ -14,43 +15,47 @@ import {
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
+import { useTranslation } from '@/hooks/use-translation';
+
 
 const partners = [
   'Innovate Corp', 'QuantumLeap', 'Stellar Solutions', 'Nexus Group', 'Vertex Inc.', 'Synergy Systems'
 ];
 
-const testimonials = [
-  {
-    name: 'Jean Dupont',
-    title: 'PDG, Innovate Corp',
-    avatar: 'https://i.pravatar.cc/150?img=1',
-    text: "Apex Insights a transformé notre entreprise. Leurs conseils stratégiques ont changé la donne, entraînant une augmentation de 40% de nos revenus.",
-    rating: 5,
-  },
-  {
-    name: 'Marie Martin',
-    title: 'DGD, QuantumLeap',
-    avatar: 'https://i.pravatar.cc/150?img=2',
-    text: "Le professionnalisme et l'expertise approfondie de l'équipe Apex sont inégalés. Ils ont fourni des résultats au-delà de nos attentes.",
-    rating: 5,
-  },
-  {
-    name: 'Samuel Lee',
-    title: 'CTO, Stellar Solutions',
-    avatar: 'https://i.pravatar.cc/150?img=3',
-    text: "Leur feuille de route pour la transformation numérique était brillante. Nous avons rationalisé nos opérations et amélioré considérablement la satisfaction de nos clients.",
-    rating: 5,
-  },
-];
-
 export default function Clients() {
+  const { t } = useTranslation();
+
+  const testimonials = [
+    {
+      name: 'Jean Dupont',
+      title: 'PDG, Innovate Corp',
+      avatar: 'https://i.pravatar.cc/150?img=1',
+      text: t('clients.testimonials.0.text'),
+      rating: 5,
+    },
+    {
+      name: 'Marie Martin',
+      title: 'DGD, QuantumLeap',
+      avatar: 'https://i.pravatar.cc/150?img=2',
+      text: t('clients.testimonials.1.text'),
+      rating: 5,
+    },
+    {
+      name: 'Samuel Lee',
+      title: 'CTO, Stellar Solutions',
+      avatar: 'https://i.pravatar.cc/150?img=3',
+      text: t('clients.testimonials.2.text'),
+      rating: 5,
+    },
+  ];
+
   return (
     <section id="clients" className="py-24">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">Approuvé par les leaders de l'industrie</h2>
+          <h2 className="text-4xl font-headline font-bold text-primary">{t('clients.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Nous sommes fiers de nous associer à un large éventail de clients qui nous font confiance pour fournir l'excellence.
+            {t('clients.subtitle')}
           </p>
         </div>
         <Carousel
@@ -77,7 +82,7 @@ export default function Clients() {
 
         <div className="mt-24">
             <div className="text-center mb-16">
-                <h3 className="text-3xl font-headline font-bold">Ce que disent nos clients</h3>
+                <h3 className="text-3xl font-headline font-bold">{t('clients.testimonialsTitle')}</h3>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (

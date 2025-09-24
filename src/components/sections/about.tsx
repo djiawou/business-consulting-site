@@ -1,27 +1,30 @@
+'use client'
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Eye, Rocket, Handshake } from 'lucide-react';
+import { useTranslation } from '@/hooks/use-translation';
 
 export default function About() {
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-us');
+  const { t } = useTranslation();
 
   const values = [
     {
       icon: <Eye className="w-8 h-8 text-primary" />,
-      title: 'Notre Vision',
-      description: 'Être le catalyseur de référence pour la transformation des entreprises et la croissance durable à l’échelle mondiale.',
+      title: t('about.values.vision.title'),
+      description: t('about.values.vision.description'),
     },
     {
       icon: <Rocket className="w-8 h-8 text-primary" />,
-      title: 'Notre Mission',
-      description: 'Donner aux organisations les moyens de libérer leur plein potentiel grâce à des stratégies innovantes et des analyses basées sur les données.',
+      title: t('about.values.mission.title'),
+      description: t('about.values.mission.description'),
     },
     {
       icon: <Handshake className="w-8 h-8 text-primary" />,
-      title: 'Nos Valeurs',
-      description: 'L\'intégrité, l\'excellence et le partenariat sont les piliers de nos relations avec nos clients.',
+      title: t('about.values.values.title'),
+      description: t('about.values.values.description'),
     },
   ];
 
@@ -30,10 +33,10 @@ export default function About() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-headline font-bold text-primary">
-            Pionniers de l'Excellence Commerciale
+            {t('about.title')}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Apex Insights a été fondé sur le principe de fournir des résultats tangibles. Nous combinons une connaissance approfondie de l'industrie avec une passion pour l'innovation afin de résoudre les défis les plus critiques de nos clients.
+            {t('about.subtitle')}
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">

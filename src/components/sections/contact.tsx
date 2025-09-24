@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -25,25 +24,30 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import { submitContactForm } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Spinner } from '@/components/ui/spinner';
+import { useTranslation } from '@/hooks/use-translation';
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Le nom doit comporter au moins 2 caractères.' }),
-  email: z.string().email({ message: 'Veuillez saisir une adresse e-mail valide.' }),
-  subject: z.string().min(5, { message: 'Le sujet doit comporter au moins 5 caractères.' }),
-  message: z.string().min(10, { message: 'Le message doit comporter au moins 10 caractères.' }),
-});
-
-type FormData = z.infer<typeof formSchema>;
-
-const initialState = {
-  message: '',
-  success: false,
-};
 
 export default function Contact() {
   const mapImage = PlaceHolderImages.find((img) => img.id === 'contact-map');
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
+  const { t, language } = useTranslation();
+
+  const formSchema = z.object({
+    name: z.string().min(2, { message: t('contact.form.errors.name') }),
+    email: z.string().email({ message: t('contact.form.errors.email') }),
+    subject: z.string().min(5, { message: t('contact.form.errors.subject') }),
+    message: z.string().min(10, { message: t('contact.form.errors.message') }),
+  });
+
+  type FormData = z.infer<typeof formSchema>;
+  
+  const initialState = {
+    message: '',
+    success: false,
+    lang: language
+  };
+  
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -59,8 +63,20 @@ export default function Contact() {
 
   useEffect(() => {
     if (state?.message) {
+      const currentLang = state.lang || 'fr';
+      const toastMessages = {
+        fr: {
+          success: 'Succès !',
+          error: 'Erreur',
+        },
+        en: {
+          success: 'Success!',
+          error: 'Error',
+        }
+      }
+
       toast({
-        title: state.success ? 'Succès !' : 'Erreur',
+        title: state.success ? toastMessages[currentLang].success : toastMessages[currentLang].error,
         description: state.message,
         variant: state.success ? 'default' : 'destructive',
       });
@@ -74,26 +90,27 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-secondary">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">Contactez-nous</h2>
+          <h2 className="text-4xl font-headline font-bold text-primary">{t('contact.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Nous sommes là pour vous aider. Contactez-nous pour une consultation ou pour en savoir plus sur nos services.
+            {t('contact.subtitle')}
           </p>
         </div>
         <Card>
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2">
               <div className="p-8 md:p-12">
-                <h3 className="text-2xl font-bold font-headline mb-6">Écrivez-nous</h3>
+                <h3 className="text-2xl font-bold font-headline mb-6">{t('contact.form.title')}</h3>
                 <Form {...form}>
                   <form action={formAction} className="space-y-6">
+                    <input type="hidden" name="lang" value={language} />
                     <FormField
                       control={form.control}
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Nom complet</FormLabel>
+                          <FormLabel>{t('contact.form.name')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="Jean Dupont" {...field} />
+                            <Input placeholder={t('contact.form.name_placeholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -104,9 +121,9 @@ export default function Contact() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Adresse e-mail</FormLabel>
+                          <FormLabel>{t('contact.form.email')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="vous@exemple.com" {...field} />
+                            <Input placeholder={t('contact.form.email_placeholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -117,9 +134,9 @@ export default function Contact() {
                       name="subject"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Sujet</FormLabel>
+                          <FormLabel>{t('contact.form.subject')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="Concernant..." {...field} />
+                            <Input placeholder={t('contact.form.subject_placeholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -130,23 +147,23 @@ export default function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Message</FormLabel>
+                          <FormLabel>{t('contact.form.message')}</FormLabel>
                           <FormControl>
-                            <Textarea placeholder="Votre message ici..." {...field} rows={5} />
+                            <Textarea placeholder={t('contact.form.message_placeholder')} {...field} rows={5} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? <Spinner /> : 'Envoyer le message'}
+                      {isSubmitting ? <Spinner /> : t('contact.form.submit')}
                     </Button>
                   </form>
                 </Form>
               </div>
               <div className="bg-primary text-primary-foreground p-8 md:p-12 flex flex-col justify-between rounded-r-lg">
                 <div>
-                  <h3 className="text-2xl font-bold font-headline mb-6">Nos Coordonnées</h3>
+                  <h3 className="text-2xl font-bold font-headline mb-6">{t('contact.details.title')}</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <MapPin className="w-6 h-6" />

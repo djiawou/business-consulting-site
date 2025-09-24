@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Playfair_Display, PT_Sans } from 'next/font/google';
 import './globals.css';
@@ -5,6 +6,8 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { LanguageProvider } from '@/context/language-context';
+import ClientLayout from '@/components/layout/client-layout';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -19,7 +22,7 @@ const ptSans = PT_Sans({
 
 export const metadata: Metadata = {
   title: 'Apex Insights',
-  description: 'Libérer le potentiel, stimuler la croissance.',
+  description: 'Libérer le potentiel, stimuler la croissance. | Unlocking Potential, Driving Growth.',
 };
 
 export default function RootLayout({
@@ -28,24 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="!scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-      </head>
-      <body
+    <LanguageProvider>
+      <ClientLayout
         className={cn(
           'min-h-screen bg-background font-body antialiased',
           playfair.variable,
           ptSans.variable
         )}
       >
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <Toaster />
-      </body>
-    </html>
+        {children}
+      </ClientLayout>
+    </LanguageProvider>
   );
 }

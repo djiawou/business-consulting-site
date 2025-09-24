@@ -1,0 +1,167 @@
+{
+    "header": {
+        "about": "À Propos",
+        "expertise": "Expertise",
+        "services": "Services",
+        "clients": "Clients",
+        "contact": "Contact"
+    },
+    "footer": {
+        "tagline": "Libérer le potentiel, stimuler la croissance.",
+        "solutions": {
+            "title": "Solutions",
+            "management": "Conseil en Management",
+            "digitalization": "Digitalisation",
+            "outsourcing": "Externalisation",
+            "training": "Formation"
+        },
+        "company": {
+            "title": "Entreprise",
+            "about": "À Propos",
+            "clients": "Clients"
+        },
+        "contact": {
+            "title": "Contact"
+        },
+        "rights": "Tous droits réservés."
+    },
+    "hero": {
+        "title": "Libérer le potentiel, stimuler la croissance",
+        "subtitle": "Votre partenaire de confiance pour naviguer dans les complexités du monde des affaires moderne. Nous offrons des perspectives expertes et des stratégies transformatrices.",
+        "servicesButton": "Nos Services",
+        "contactButton": "Contactez-nous"
+    },
+    "about": {
+        "title": "Pionniers de l'Excellence Commerciale",
+        "subtitle": "Apex Insights a été fondé sur le principe de fournir des résultats tangibles. Nous combinons une connaissance approfondie de l'industrie avec une passion pour l'innovation afin de résoudre les défis les plus critiques de nos clients.",
+        "values": {
+            "vision": {
+                "title": "Notre Vision",
+                "description": "Être le catalyseur de référence pour la transformation des entreprises et la croissance durable à l’échelle mondiale."
+            },
+            "mission": {
+                "title": "Notre Mission",
+                "description": "Donner aux organisations les moyens de libérer leur plein potentiel grâce à des stratégies innovantes et des analyses basées sur les données."
+            },
+            "values": {
+                "title": "Nos Valeurs",
+                "description": "L'intégrité, l'excellence et le partenariat sont les piliers de nos relations avec nos clients."
+            }
+        }
+    },
+    "expertise": {
+        "title": "Notre Expertise Fondamentale",
+        "subtitle": "Mettre à profit une connaissance approfondie du secteur pour obtenir des résultats inégalés dans des domaines clés.",
+        "areas": {
+            "strategic": {
+                "title": "Conseil Stratégique",
+                "description": "Nous fournissons des stratégies concrètes et basées sur les données pour naviguer dans les complexités du marché et saisir les opportunités de croissance."
+            },
+            "digital": {
+                "title": "Transformation Digitale",
+                "description": "Nos experts vous guident à chaque étape de la digitalisation, de l'automatisation des processus à l'expérience client."
+            },
+            "sap": {
+                "title": "Support SAP",
+                "description": "Maximisez votre investissement SAP avec nos services complets de support, de mise en œuvre et d'optimisation."
+            }
+        }
+    },
+    "services": {
+        "title": "Ce que nous offrons",
+        "subtitle": "Une gamme complète de services conçus pour relever vos défis commerciaux les plus complexes et favoriser une croissance durable.",
+        "items": {
+            "sap_migration": {
+                "title": "Migration SAP vers le Cloud",
+                "description": "Migration transparente de votre environnement SAP vers le cloud pour plus de flexibilité, de performance et une réduction des coûts. Nous assurons une transition sécurisée et optimisée."
+            },
+            "sap_expertise": {
+                "title": "Expertise SAP",
+                "description": "Nos consultants certifiés SAP optimisent vos modules existants, implémentent de nouvelles fonctionnalités et assurent la performance de votre écosystème SAP."
+            },
+            "support": {
+                "title": "Assistance et Support",
+                "description": "Un support technique et fonctionnel réactif pour garantir la continuité de vos opérations. Nous offrons une assistance 24/7 pour résoudre rapidement tous vos incidents."
+            },
+            "training": {
+                "title": "Formation",
+                "description": "Programmes de formation sur mesure pour vos équipes afin de maximiser l'adoption des outils et d'améliorer la productivité. Sessions en ligne ou sur site."
+            },
+            "strategy": {
+                "title": "Conseils et Stratégie d'entreprise",
+                "description": "Nous vous aidons à définir une vision claire et une feuille de route stratégique pour aligner votre technologie sur vos objectifs commerciaux et stimuler la croissance."
+            },
+            "digital_transformation": {
+                "title": "Transformation Digitale",
+                "description": "Accompagnement de A à Z dans votre transformation numérique, de l'audit initial à la mise en œuvre de solutions innovantes pour digitaliser vos processus métier."
+            }
+        }
+    },
+    "clients": {
+        "title": "Approuvé par les leaders de l'industrie",
+        "subtitle": "Nous sommes fiers de nous associer à un large éventail de clients qui nous font confiance pour fournir l'excellence.",
+        "testimonialsTitle": "Ce que disent nos clients",
+        "testimonials": [
+            { "text": "Apex Insights a transformé notre entreprise. Leurs conseils stratégiques ont changé la donne, entraînant une augmentation de 40% de nos revenus." },
+            { "text": "Le professionnalisme et l'expertise approfondie de l'équipe Apex sont inégalés. Ils ont fourni des résultats au-delà de nos attentes." },
+            { "text": "Leur feuille de route pour la transformation numérique était brillante. Nous avons rationalisé nos opérations et amélioré considérablement la satisfaction de nos clients." }
+        ]
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "subtitle": "Nous sommes là pour vous aider. Contactez-nous pour une consultation ou pour en savoir plus sur nos services.",
+        "form": {
+            "title": "Écrivez-nous",
+            "name": "Nom complet",
+            "name_placeholder": "Jean Dupont",
+            "email": "Adresse e-mail",
+            "email_placeholder": "vous@exemple.com",
+            "subject": "Sujet",
+            "subject_placeholder": "Concernant...",
+            "message": "Message",
+            "message_placeholder": "Votre message ici...",
+            "submit": "Envoyer le message",
+            "success": "Merci pour votre message ! Nous vous recontacterons sous peu.",
+            "errors": {
+                "name": "Le nom doit comporter au moins 2 caractères.",
+                "email": "Veuillez saisir une adresse e-mail valide.",
+                "subject": "Le sujet doit comporter au moins 5 caractères.",
+                "message": "Le message doit comporter au moins 10 caractères.",
+                "generic": "Une erreur est survenue. Veuillez vérifier les champs."
+            }
+        },
+        "details": {
+            "title": "Nos Coordonnées"
+        }
+    },
+    "image_generator": {
+        "title": "Générateur de Médias d'Entreprise IA",
+        "subtitle": "Générez des images et des vidéos d'entreprise époustouflantes et conformes à votre marque en quelques secondes. Décrivez votre vision, et laissez notre IA lui donner vie, adaptée aux tendances stylistiques du domaine du conseil aux entreprises.",
+        "form": {
+            "prompt_label": "Votre Vision",
+            "prompt_placeholder": "Ex: Un plan dynamique d'un consultant présentant un graphique de croissance...",
+            "prompt_description": "Décrivez en détail l'image ou la vidéo que vous souhaitez créer.",
+            "mediaType_label": "Type de Média",
+            "image_label": "Image",
+            "video_label": "Vidéo (peut prendre jusqu'à une minute)",
+            "submit_button": "Générer le média",
+            "loading_button": "Génération en cours...",
+            "errors": {
+                "prompt": "Le prompt doit contenir au moins 10 caractères.",
+                "mediaType": "Vous devez sélectionner un type de média."
+            },
+            "defaultPrompt": "Une équipe diversifiée de professionnels dans un bureau moderne et ensoleillé, collaborant autour d'une table de conférence élégante. Le style est cinématographique et optimiste."
+        },
+        "result_title": "Résultat",
+        "alt_generated_image": "Image d'entreprise générée",
+        "toast": {
+            "success_title": "Génération terminée !",
+            "success_description": "Votre {type} a été générée avec succès.",
+            "image": "image",
+            "video": "vidéo",
+            "error_title": "La génération a échoué",
+            "error_no_media": "L'IA n'a retourné aucun média.",
+            "error_unknown": "Une erreur inconnue est survenue."
+        }
+    }
+}

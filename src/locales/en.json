@@ -1,0 +1,167 @@
+{
+    "header": {
+        "about": "About",
+        "expertise": "Expertise",
+        "services": "Services",
+        "clients": "Clients",
+        "contact": "Contact"
+    },
+    "footer": {
+        "tagline": "Unlocking Potential, Driving Growth.",
+        "solutions": {
+            "title": "Solutions",
+            "management": "Management Consulting",
+            "digitalization": "Digitalization",
+            "outsourcing": "Outsourcing",
+            "training": "Training"
+        },
+        "company": {
+            "title": "Company",
+            "about": "About",
+            "clients": "Clients"
+        },
+        "contact": {
+            "title": "Contact"
+        },
+        "rights": "All rights reserved."
+    },
+    "hero": {
+        "title": "Unlocking Potential, Driving Growth",
+        "subtitle": "Your trusted partner in navigating the complexities of the modern business world. We offer expert insights and transformative strategies.",
+        "servicesButton": "Our Services",
+        "contactButton": "Contact Us"
+    },
+    "about": {
+        "title": "Pioneers of Business Excellence",
+        "subtitle": "Apex Insights was founded on the principle of delivering tangible results. We combine deep industry knowledge with a passion for innovation to solve our clients' most critical challenges.",
+        "values": {
+            "vision": {
+                "title": "Our Vision",
+                "description": "To be the leading catalyst for business transformation and sustainable growth globally."
+            },
+            "mission": {
+                "title": "Our Mission",
+                "description": "To empower organizations to unlock their full potential through innovative strategies and data-driven insights."
+            },
+            "values": {
+                "title": "Our Values",
+                "description": "Integrity, excellence, and partnership are the cornerstones of our client relationships."
+            }
+        }
+    },
+    "expertise": {
+        "title": "Our Core Expertise",
+        "subtitle": "Leveraging deep industry knowledge to deliver unparalleled results in key areas.",
+        "areas": {
+            "strategic": {
+                "title": "Strategic Consulting",
+                "description": "We provide actionable, data-driven strategies to navigate market complexities and seize growth opportunities."
+            },
+            "digital": {
+                "title": "Digital Transformation",
+                "description": "Our experts guide you through every step of digitalization, from process automation to customer experience."
+            },
+            "sap": {
+                "title": "SAP Support",
+                "description": "Maximize your SAP investment with our comprehensive support, implementation, and optimization services."
+            }
+        }
+    },
+    "services": {
+        "title": "What We Offer",
+        "subtitle": "A comprehensive suite of services designed to meet your most complex business challenges and foster sustainable growth.",
+        "items": {
+            "sap_migration": {
+                "title": "SAP Migration to the Cloud",
+                "description": "Seamless migration of your SAP environment to the cloud for flexibility, performance, and cost reduction. We ensure a secure and optimized transition."
+            },
+            "sap_expertise": {
+                "title": "SAP Expertise",
+                "description": "Our certified SAP consultants optimize your existing modules, implement new functionalities, and ensure the performance of your SAP ecosystem."
+            },
+            "support": {
+                "title": "Assistance and Support",
+                "description": "Responsive technical and functional support to ensure the continuity of your operations. We offer 24/7 assistance to quickly resolve all your incidents."
+            },
+            "training": {
+                "title": "Training",
+                "description": "Customized training programs for your teams to maximize tool adoption and improve productivity. Online or on-site sessions."
+            },
+            "strategy": {
+                "title": "Business Consulting and Strategy",
+                "description": "We help you define a clear vision and a strategic roadmap to align your technology with your business goals and drive growth."
+            },
+            "digital_transformation": {
+                "title": "Digital Transformation",
+                "description": "End-to-end support in your digital transformation, from the initial audit to the implementation of innovative solutions to digitize your business processes."
+            }
+        }
+    },
+    "clients": {
+        "title": "Trusted by Industry Leaders",
+        "subtitle": "We are proud to partner with a diverse range of clients who trust us to deliver excellence.",
+        "testimonialsTitle": "What Our Clients Say",
+        "testimonials": [
+            { "text": "Apex Insights transformed our business. Their strategic advice was a game-changer, leading to a 40% increase in revenue." },
+            { "text": "The professionalism and deep expertise of the Apex team are unmatched. They delivered results beyond our expectations." },
+            { "text": "Their digital transformation roadmap was brilliant. We've streamlined our operations and significantly improved customer satisfaction." }
+        ]
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "We're here to help. Reach out for a consultation or to learn more about our services.",
+        "form": {
+            "title": "Write to Us",
+            "name": "Full Name",
+            "name_placeholder": "John Doe",
+            "email": "Email Address",
+            "email_placeholder": "you@example.com",
+            "subject": "Subject",
+            "subject_placeholder": "Regarding...",
+            "message": "Message",
+            "message_placeholder": "Your message here...",
+            "submit": "Send Message",
+            "success": "Thank you for your message! We will get back to you shortly.",
+            "errors": {
+                "name": "Name must be at least 2 characters.",
+                "email": "Please enter a valid email address.",
+                "subject": "Subject must be at least 5 characters.",
+                "message": "Message must be at least 10 characters.",
+                "generic": "An error occurred. Please check the fields."
+            }
+        },
+        "details": {
+            "title": "Our Contact Information"
+        }
+    },
+    "image_generator": {
+        "title": "AI Corporate Media Generator",
+        "subtitle": "Generate stunning, on-brand corporate images and videos in seconds. Describe your vision, and let our AI bring it to life, tailored to the stylistic trends of the business consulting domain.",
+        "form": {
+            "prompt_label": "Your Vision",
+            "prompt_placeholder": "E.g., A dynamic shot of a consultant presenting a growth chart...",
+            "prompt_description": "Describe in detail the image or video you want to create.",
+            "mediaType_label": "Media Type",
+            "image_label": "Image",
+            "video_label": "Video (may take up to a minute)",
+            "submit_button": "Generate Media",
+            "loading_button": "Generating...",
+            "errors": {
+                "prompt": "Prompt must be at least 10 characters long.",
+                "mediaType": "You must select a media type."
+            },
+            "defaultPrompt": "A diverse team of professionals in a modern, sunlit office, collaborating around a sleek conference table. The style is cinematic and optimistic."
+        },
+        "result_title": "Result",
+        "alt_generated_image": "Generated corporate image",
+        "toast": {
+            "success_title": "Generation Complete!",
+            "success_description": "Your {type} has been successfully generated.",
+            "image": "image",
+            "video": "video",
+            "error_title": "Generation Failed",
+            "error_no_media": "The AI did not return any media.",
+            "error_unknown": "An unknown error occurred."
+        }
+    }
+}

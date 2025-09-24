@@ -1,9 +1,12 @@
-
+'use client'
 import Link from 'next/link';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
 import { Logo } from '../logo';
+import { useTranslation } from '@/hooks/use-translation';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-secondary">
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -16,7 +19,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground">
-              Libérer le potentiel, stimuler la croissance.
+              {t('footer.tagline')}
             </p>
             <div className="flex gap-4">
               <Link href="#" aria-label="Twitter">
@@ -31,23 +34,23 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Solutions</h3>
+            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">{t('footer.solutions.title')}</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">Conseil en Management</Link></li>
-              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">Digitalisation</Link></li>
-              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">Externalisation</Link></li>
-              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">Formation</Link></li>
+              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">{t('footer.solutions.management')}</Link></li>
+              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">{t('footer.solutions.digitalization')}</Link></li>
+              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">{t('footer.solutions.outsourcing')}</Link></li>
+              <li><Link href="#services" className="text-base text-muted-foreground hover:text-primary">{t('footer.solutions.training')}</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Entreprise</h3>
+            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">{t('footer.company.title')}</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link href="#about" className="text-base text-muted-foreground hover:text-primary">À Propos</Link></li>
-              <li><Link href="#clients" className="text-base text-muted-foreground hover:text-primary">Clients</Link></li>
+              <li><Link href="#about" className="text-base text-muted-foreground hover:text-primary">{t('footer.company.about')}</Link></li>
+              <li><Link href="#clients" className="text-base text-muted-foreground hover:text-primary">{t('footer.company.clients')}</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Contact</h3>
+            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">{t('footer.contact.title')}</h3>
             <div className="mt-4 space-y-2 text-base text-muted-foreground">
                 <p>123 Rue du Commerce, Bureau 100</p>
                 <p>Paris, 75001</p>
@@ -57,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-base text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Apex Insights. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Apex Insights. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>
