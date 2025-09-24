@@ -1,3 +1,4 @@
+
 {
     "header": {
         "about": "À Propos",
@@ -79,7 +80,7 @@
         "subtitle": "Une gamme complète de services conçus pour relever vos défis commerciaux les plus complexes et favoriser une croissance durable.",
         "items": {
             "sap_migration": {
-                "title": "Migration SAP vers le Cloud",
+                "title": "Cloud d’adoption",
                 "description": "Migration transparente de votre environnement SAP vers le cloud pour plus de flexibilité, de performance et une réduction des coûts. Nous assurons une transition sécurisée et optimisée."
             },
             "sap_expertise": {

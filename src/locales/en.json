@@ -1,3 +1,4 @@
+
 {
     "header": {
         "about": "About",
@@ -79,7 +80,7 @@
         "subtitle": "A comprehensive suite of services designed to meet your most complex business challenges and foster sustainable growth.",
         "items": {
             "sap_migration": {
-                "title": "SAP Migration to the Cloud",
+                "title": "Cloud Adoption",
                 "description": "Seamless migration of your SAP environment to the cloud for flexibility, performance, and cost reduction. We ensure a secure and optimized transition."
             },
             "sap_expertise": {
