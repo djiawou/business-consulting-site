@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTranslation } from '@/hooks/use-translation';
+import { ThemeToggle } from '../ui/theme-toggle';
 
 // SVG for France Flag
 const FRFlag = () => (
@@ -58,6 +59,7 @@ export default function Header() {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // set initial state
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -89,10 +91,11 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Globe className="h-6 w-6" />
+                <Languages className="h-6 w-6" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

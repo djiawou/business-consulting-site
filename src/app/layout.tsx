@@ -8,6 +8,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { LanguageProvider } from '@/context/language-context';
 import ClientLayout from '@/components/layout/client-layout';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -32,15 +33,22 @@ export default function RootLayout({
 }>) {
   return (
     <LanguageProvider>
-      <ClientLayout
-        className={cn(
-          'min-h-screen bg-background font-body antialiased',
-          playfair.variable,
-          openSans.variable
-        )}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
       >
-        {children}
-      </ClientLayout>
+        <ClientLayout
+          className={cn(
+            'min-h-screen bg-background font-body antialiased',
+            playfair.variable,
+            openSans.variable
+          )}
+        >
+          {children}
+        </ClientLayout>
+      </ThemeProvider>
     </LanguageProvider>
   );
 }
