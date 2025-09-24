@@ -71,7 +71,7 @@ export default function Realisations() {
     },
     {
       icon: Calendar,
-      value: 5,
+      value: 15,
       label: t('realisations.stats.years'),
     },
   ];
