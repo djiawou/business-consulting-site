@@ -13,34 +13,40 @@
       "imageHint": "collaborative team"
     },
     {
-      "id": "service-management",
-      "description": "An abstract image representing strategic growth and planning.",
-      "imageUrl": "https://images.unsplash.com/photo-1711097383282-28097ae16b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdHJhdGVneSUyMGNoYXJ0fGVufDB8fHx8MTc1ODYxNTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "strategy chart"
-    },
-    {
-      "id": "service-digitalization",
-      "description": "A visual of digital networks and data streams.",
-      "imageUrl": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwbmV0d29ya3xlbnwwfHx8fDE3NTg1OTk5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "digital network"
-    },
-    {
-      "id": "service-outsourcing",
-      "description": "Two business professionals shaking hands, symbolizing partnership.",
-      "imageUrl": "https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnVzaW5lc3MlMjBoYW5kc2hha2V8ZW58MHx8fHwxNzU4NjA4MTkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "business handshake"
-    },
-    {
-      "id": "service-training",
-      "description": "A person giving a presentation to an engaged audience.",
-      "imageUrl": "https://images.unsplash.com/photo-1758518729794-456bbd9f70f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzU4NjUxMDQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "corporate presentation"
-    },
-    {
       "id": "contact-map",
       "description": "A stylized map of a city, pointing to a central location.",
       "imageUrl": "https://images.unsplash.com/photo-1717700299588-ee73dc7de1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2l0eSUyMG1hcHxlbnwwfHx8fDE3NTg2NzY1MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "city map"
+    },
+    {
+      "id": "service-sap-expertise",
+      "description": "A person analyzing data on a screen, representing SAP expertise.",
+      "imageUrl": "https://images.unsplash.com/photo-1600469984476-c713650f1b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGF0YSUyMGFuYWx5c2lzfGVufDB8fHx8MTc1ODY4MzA5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data analysis"
+    },
+    {
+      "id": "service-support",
+      "description": "A support agent with a headset helping a customer.",
+      "imageUrl": "https://images.unsplash.com/photo-1715635845783-a184542d95e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjdXN0b21lciUyMHN1cHBvcnR8ZW58MHx8fHwxNzU4NTkwMzIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "customer support"
+    },
+    {
+      "id": "service-training-new",
+      "description": "A person giving a presentation on a whiteboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1677506048377-1099738d294d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3aGl0ZWJvYXJkJTIwcHJlc2VudGF0aW9ufGVufDB8fHx8MTc1ODY5MjYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "whiteboard presentation"
+    },
+    {
+      "id": "service-strategy",
+      "description": "Two people discussing business strategy over coffee.",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU4NjkyNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business discussion"
+    },
+    {
+      "id": "service-digital-transformation",
+      "description": "A person using a VR headset, symbolizing digital transformation.",
+      "imageUrl": "https://images.unsplash.com/photo-1657734240334-b13dfc3f6c91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxWUiUyMGhlYWRzZXR8ZW58MHx8fHwxNzU4NjA1MDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "VR headset"
     }
   ]
 }
