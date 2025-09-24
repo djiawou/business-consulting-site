@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -28,10 +29,17 @@ import { useTranslation } from '@/hooks/use-translation';
 
 
 export default function Contact() {
+  const { t, language } = useTranslation();
+  
+  const initialState = {
+    message: '',
+    success: false,
+    lang: language
+  };
+
   const mapImage = PlaceHolderImages.find((img) => img.id === 'contact-map');
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
-  const { t, language } = useTranslation();
 
   const formSchema = z.object({
     name: z.string().min(2, { message: t('contact.form.errors.name') }),
@@ -42,13 +50,6 @@ export default function Contact() {
 
   type FormData = z.infer<typeof formSchema>;
   
-  const initialState = {
-    message: '',
-    success: false,
-    lang: language
-  };
-  
-
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
