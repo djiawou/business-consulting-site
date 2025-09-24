@@ -21,17 +21,17 @@ import Image from 'next/image';
 
 
 const partners = [
-  { name: 'Innovate Corp', logo: '/logos/innovate-corp.png' },
-  { name: 'QuantumLeap', logo: '/logos/quantumleap.jpeg' },
-  { name: 'Stellar Solutions', logo: '/logos/stellar-solutions.jpeg' },
-  { name: 'Nexus Group', logo: '/logos/nexus-group.png' },
-  { name: 'Vertex Inc.', logo: '/logos/vertex-inc.png' },
-  { name: 'Synergy Systems', logo: '/logos/synergy-systems.jpeg' },
-  { name: 'GlobalTrust', logo: '/logos/globaltrust.png' },
-  { name: 'Pinnacle Corp', logo: '/logos/pinnacle-corp.jpeg' },
-  { name: 'Zenith Solutions', logo: '/logos/zenith-solutions.png' },
-  { name: 'FusionWorks', logo: '/logos/fusionworks.png' }
-];
+    { name: 'Innovate Corp', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'QuantumLeap', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'Stellar Solutions', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'Nexus Group', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'Vertex Inc.', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'Synergy Systems', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'GlobalTrust', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'Pinnacle Corp', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'Zenith Solutions', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' },
+    { name: 'FusionWorks', logo: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600' }
+  ];
 
 export default function Clients() {
   const { t } = useTranslation();
@@ -104,7 +104,7 @@ export default function Clients() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
-                    <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
                         <CardHeader className="flex-row items-center gap-4">
                              <Avatar className="w-16 h-16">
                                 <AvatarImage src={testimonial.avatar} alt={testimonial.name} />

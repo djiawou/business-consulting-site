@@ -21,7 +21,7 @@
     {
       "id": "service-sap-migration",
       "description": "Cloud servers and data streams, representing SAP migration to the cloud.",
-      "imageUrl": "/services/cloud-computing.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600",
       "imageHint": "cloud migration"
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "expertise-sap-modules",
       "description": "An overview of SAP ERP modules in a circular diagram.",
-      "imageUrl": "/expertise/sap-modules.png",
+      "imageUrl": "https://images.unsplash.com/photo-1688632001579-3d17d52a2b00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8U0FQJTIwZGlhZ3JhbXxlbnwwfHx8fDE3NTg3MDgzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "SAP diagram"
     }
   ]
