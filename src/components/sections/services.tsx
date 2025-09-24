@@ -1,3 +1,4 @@
+
 'use client'
 
 import Image from 'next/image';
@@ -6,6 +7,7 @@ import {
 } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useTranslation } from '@/hooks/use-translation';
+import { ArrowDown } from 'lucide-react';
 
 
 export default function Services() {
@@ -55,7 +57,7 @@ export default function Services() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const serviceImage = PlaceHolderImages.find((img) => img.id === service.id);
 
             return (
@@ -72,15 +74,21 @@ export default function Services() {
                     />
                   ) : <div className="h-full w-full bg-muted" />}
                    <div className="absolute inset-0 bg-black/30" />
-                  <div className="absolute bottom-0 left-0 p-6">
+                  <div className="absolute bottom-0 left-0 p-6 flex justify-between w-full items-end">
                     <h3 className="text-2xl font-bold font-headline text-white">{service.title}</h3>
+                    <span className="text-5xl font-bold font-headline text-white/50">
+                        {String(index + 1).padStart(2, '0')}
+                    </span>
                   </div>
                 </div>
 
                 
                 <div className="absolute inset-0 bg-primary text-primary-foreground p-6 flex flex-col justify-center items-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                   <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
-                  <p className="text-primary-foreground/90">{service.description}</p>
+                  <p className="text-primary-foreground/90 mb-4">{service.description}</p>
+                   <a href="#" className="mt-auto flex items-center gap-2 text-sm font-semibold hover:underline" onClick={(e) => e.preventDefault()}>
+                      Voir plus <ArrowDown className="w-4 h-4"/>
+                   </a>
                 </div>
               </Card>
             );
@@ -90,3 +98,4 @@ export default function Services() {
     </section>
   );
 }
+

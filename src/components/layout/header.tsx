@@ -1,8 +1,9 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Logo } from '../logo';
@@ -13,6 +14,30 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTranslation } from '@/hooks/use-translation';
+
+// SVG for France Flag
+const FRFlag = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 3 2">
+    <rect width="3" height="2" fill="#fff"/>
+    <rect width="2" height="2" fill="#002395"/>
+    <rect width="1" height="2" fill="#ed2939"/>
+  </svg>
+);
+
+// SVG for UK Flag (for English)
+const UKFlag = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 60 30">
+        <clipPath id="a"><path d="M0 0v30h60V0z"/></clipPath>
+        <clipPath id="b"><path d="M30 15h30v15H0V0h30z"/></clipPath>
+        <g clipPath="url(#a)">
+            <path d="M0 0v30h60V0z" fill="#012169"/>
+            <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6"/>
+            <path d="M0 0l60 30m0-30L0 30" clipPath="url(#b)" stroke="#C8102E" strokeWidth="4"/>
+            <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/>
+            <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/>
+        </g>
+    </svg>
+);
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,15 +92,17 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Globe className="h-6 w-6" />
+                <Languages className="h-6 w-6" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setLanguage('fr')}>
-                Français
+              <DropdownMenuItem onClick={() => setLanguage('fr')} className="flex items-center gap-2">
+                <FRFlag />
+                <span>Français</span>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage('en')}>
-                English
+              <DropdownMenuItem onClick={() => setLanguage('en')} className="flex items-center gap-2">
+                <UKFlag />
+                <span>English</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
