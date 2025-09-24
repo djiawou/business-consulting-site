@@ -34,9 +34,6 @@ export default function Expertise() {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-primary font-bold mb-2">
-              // {t('expertise.tagline')}
-            </p>
             <h2 className="text-4xl font-headline font-bold text-foreground mb-6">
               {t('expertise.title_new')}
             </h2>
