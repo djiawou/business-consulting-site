@@ -1,65 +1,81 @@
-'use client'
-import { BrainCircuit, IterationCw } from 'lucide-react';
+'use client';
+import { CheckCircle2 } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
 
+const SapModule = ({
+  name,
+  description,
+  className,
+}: {
+  name: string;
+  description: string;
+  className?: string;
+}) => (
+  <div
+    className={`bg-blue-500 text-white rounded-lg shadow-lg p-3 text-center flex flex-col justify-center ${className}`}
+  >
+    <div className="font-bold text-sm md:text-base">{name}</div>
+    <div className="text-xs hidden md:block">({description})</div>
+  </div>
+);
 
 export default function Expertise() {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    const expertiseAreas = [
-        {
-          icon: <BrainCircuit className="w-16 h-16 text-primary icon-glow" />,
-          title: t('expertise.areas.strategic.title'),
-          description: t('expertise.areas.strategic.description'),
-        },
-        {
-          icon: <IterationCw className="w-16 h-16 text-primary icon-glow" />,
-          title: t('expertise.areas.digital.title'),
-          description: t('expertise.areas.digital.description'),
-        },
-        {
-          icon: (
-            <div className="w-16 h-16 flex items-center justify-center icon-glow">
+  const expertisePoints = [
+    t('expertise.points.implementation'),
+    t('expertise.points.migration'),
+    t('expertise.points.competence'),
+    t('expertise.points.architecture'),
+  ];
+
+  return (
+    <section id="expertise" className="py-24 bg-secondary">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-primary font-bold mb-2">
+              // {t('expertise.tagline')}
+            </p>
+            <h2 className="text-4xl font-headline font-bold text-foreground mb-6">
+              {t('expertise.title_new')}
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              {t('expertise.description_new')}
+            </p>
+            <ul className="space-y-4">
+              {expertisePoints.map((point, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500" />
+                  <span className="text-foreground font-medium">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative flex items-center justify-center min-h-[350px] md:min-h-[450px]">
+            <div className="absolute w-48 h-48 md:w-56 md:h-56 bg-white rounded-full flex items-center justify-center shadow-2xl">
               <svg
-                className="w-14 h-14 text-primary"
-                viewBox="0 0 100 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 40"
+                className="w-32 h-auto text-blue-600"
               >
                 <path
-                  d="M85 15H15C11.6863 15 9 17.6863 9 21V79C9 82.3137 11.6863 85 15 85H85C88.3137 85 91 82.3137 91 79V21C91 17.6863 88.3137 15 85 15Z"
-                  stroke="currentColor"
-                  strokeWidth="5"
-                />
-                <path
-                  d="M28.4 67.4V46.72L36.16 32.6H47.44L55.24 46.72V67.4H47.08V51.28L46.48 48.94H37.12L36.52 51.28V67.4H28.4ZM60.295 67.4V32.6H68.455V67.4H60.295Z"
                   fill="currentColor"
+                  d="M99.1,3.4c-2.3-2.3-5.9-3.4-10.4-3.4H11.2c-4.6,0-8.2,1.2-10.4,3.4C-1.4,5.6-2.5,8.8-2.5,12.9v14.1c0,4.2,1.1,7.3,3.3,9.6c2.3,2.3,5.9,3.4,10.4,3.4h77.5c4.6,0,8.2-1.2,10.4-3.4c2.3-2.3,3.3-5.5,3.3-9.6V12.9C102.5,8.8,101.4,5.6,99.1,3.4z M35.3,29.5H26l-6-11.7c-0.6-1.2-1-2.3-1.2-3.3c-0.2,1-0.5,2.1-1.1,3.3l-6,11.7h-9.2L16.4,9.7h11.2l-6,11.7c-0.5,1-0.9,1.9-1.2,2.8c0.3-0.9,0.7-1.8,1.2-2.8l6-11.7h11.1L35.3,29.5z M61.9,29.5h-9.2l-6-11.7c-0.6-1.2-1-2.3-1.2-3.3c-0.2,1-0.5,2.1-1.1,3.3l-6,11.7h-9.2L42.8,9.7h11.2l-6,11.7c-0.5,1-0.9,1.9-1.2,2.8c0.3-0.9,0.7-1.8,1.2-2.8l6-11.7h11.1L61.9,29.5z M92.4,29.5H81.2V9.7h11.2V29.5z"
                 />
               </svg>
             </div>
-          ),
-          title: t('expertise.areas.sap.title'),
-          description: t('expertise.areas.sap.description'),
-        },
-      ];
+            
+            <SapModule name="FI" description={t('expertise.modules.fi')} className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/4 w-24 h-16 md:w-28" />
+            <SapModule name="CO" description={t('expertise.modules.co')} className="absolute top-0 right-0 -translate-y-1/4 w-24 h-16 md:w-28" />
+            <SapModule name="MM" description={t('expertise.modules.mm')} className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-24 h-16 md:w-28" />
+            <SapModule name="SD" description={t('expertise.modules.sd')} className="absolute bottom-0 right-0 translate-y-1/4 w-24 h-16 md:w-28" />
+            <SapModule name="QM" description={t('expertise.modules.qm')} className="absolute bottom-0 right-1/2 translate-x-[150%] translate-y-1/4 w-24 h-16 md:w-28"/>
+            <SapModule name="PM" description={t('expertise.modules.pm')} className="absolute bottom-0 left-1/2 -translate-x-[150%] translate-y-1/4 w-24 h-16 md:w-28" />
+            <SapModule name="PP" description={t('expertise.modules.pp')} className="absolute bottom-0 left-0 translate-y-1/4 w-24 h-16 md:w-28" />
+            <SapModule name="HCM" description={t('expertise.modules.hcm')} className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 w-24 h-16 md:w-28" />
 
-  return (
-    <section id="expertise" className="py-24">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">{t('expertise.title')}</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('expertise.subtitle')}
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-12 text-center">
-          {expertiseAreas.map((item, index) => (
-            <div key={index} className="flex flex-col items-center p-6 rounded-lg transition-all">
-              <div className="mb-6">{item.icon}</div>
-              <h3 className="text-2xl font-bold font-headline mb-3">{item.title}</h3>
-              <p className="text-muted-foreground">{item.description}</p>
-            </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

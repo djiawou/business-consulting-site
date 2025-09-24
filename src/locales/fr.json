@@ -32,7 +32,7 @@
         "contactButton": "Contactez-nous"
     },
     "about": {
-        "title_new": "À propos",
+        "title_new": "À propos de nous",
         "subtitle_new": "Notre raison d’être est de permettre aux entreprises de libérer leur potentiel de développement grâce à la transformation de leur Système d’Information.",
         "paragraph_new": "Nous accompagnons la transformation et améliorons l’efficacité opérationnelle du Système d’Information SAP de nos clients à travers nos expertises : Cloud Technologie Services, Conseil et Intégration, Support et Expertise, Analytics, Data et BI et Customer Expérience. Nous nous engageons à offrir un service premium grâce à l’expertise de nos consultants, à notre méthodologie et aux relations de proximité que nous construisons avec nos clients.",
         "contact_button": "En savoir plus"
@@ -53,6 +53,25 @@
                 "title": "Support SAP",
                 "description": "Maximisez votre investissement SAP avec nos services complets de support, de mise en œuvre et d'optimisation."
             }
+        },
+        "tagline": "NOTRE EXPERTISE SAP",
+        "title_new": "Externalisation et Offshoring SAP",
+        "description_new": "Apex Insights dispose d'experts techniques avec plus de 15 ans d'expérience dans la mise en place d'architectures de solution SAP, l'administration de systèmes et un pool de développeurs chevronnés pour vous accompagner dans vos projets techniques.",
+        "points": {
+            "implementation": "Implémentation de SAP",
+            "migration": "Migration et Mise à jour SAP",
+            "competence": "Centre de compétence SAP",
+            "architecture": "Conception d'Architecture Technique"
+        },
+        "modules": {
+            "fi": "Comptabilité Financière",
+            "co": "Contrôle de Gestion",
+            "hcm": "Gestion du Capital Humain",
+            "pp": "Planification de la Production",
+            "pm": "Maintenance",
+            "qm": "Gestion de la Qualité",
+            "mm": "Gestion des Articles",
+            "sd": "Ventes et Distribution"
         }
     },
     "services": {

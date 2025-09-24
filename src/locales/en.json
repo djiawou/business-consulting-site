@@ -53,6 +53,25 @@
                 "title": "SAP Support",
                 "description": "Maximize your SAP investment with our comprehensive support, implementation, and optimization services."
             }
+        },
+        "tagline": "OUR SAP EXPERTISE",
+        "title_new": "SAP Outsourcing and Offshoring",
+        "description_new": "Apex Insights has technical experts with over 15 years of experience in implementing SAP solution architectures, system administration, and a pool of seasoned developers to assist you in your technical projects.",
+        "points": {
+            "implementation": "SAP Implementation",
+            "migration": "SAP Migration and Updates",
+            "competence": "SAP Competence Center",
+            "architecture": "Technical Architecture Design"
+        },
+        "modules": {
+            "fi": "Financial Accounting",
+            "co": "Controlling",
+            "hcm": "Human Capital Management",
+            "pp": "Production Planning",
+            "pm": "Plant Maintenance",
+            "qm": "Quality Management",
+            "mm": "Material Management",
+            "sd": "Sales and Distribution"
         }
     },
     "services": {
