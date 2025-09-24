@@ -21,7 +21,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Apex Insights',
+  title: 'Branding Consulting',
   description: 'Libérer le potentiel, stimuler la croissance. | Unlocking Potential, Driving Growth.',
 };
 

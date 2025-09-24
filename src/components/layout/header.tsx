@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Logo } from '../logo';
+import Image from 'next/image';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -72,9 +72,9 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Logo className="h-8 w-8 text-primary" />
+          <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
           <span className="text-2xl font-bold font-headline text-primary">
-            Apex Insights
+            Branding Consulting
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">

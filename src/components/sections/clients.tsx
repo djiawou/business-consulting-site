@@ -28,7 +28,7 @@ const partners = [
   { name: 'Vertex Inc.', logo: '/logos/vertex-inc.png' },
   { name: 'Synergy Systems', logo: '/logos/synergy-systems.jpeg' },
   { name: 'GlobalTrust', logo: '/logos/globaltrust.png' },
-  { name: 'Pinnacle Corp', logo: '/logos/pinnacle-corp.png' },
+  { name: 'Pinnacle Corp', logo: '/logos/pinnacle-corp.jpeg' },
   { name: 'Zenith Solutions', logo: '/logos/zenith-solutions.png' },
   { name: 'FusionWorks', logo: '/logos/fusionworks.png' }
 ];

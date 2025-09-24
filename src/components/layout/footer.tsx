@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
-import { Logo } from '../logo';
 import { useTranslation } from '@/hooks/use-translation';
+import Image from 'next/image';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -13,9 +13,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Logo className="h-8 w-8 text-primary" />
+              <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
               <span className="text-2xl font-bold font-headline text-primary">
-                Apex Insights
+                Branding Consulting
               </span>
             </Link>
             <p className="text-muted-foreground">
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-base text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Apex Insights. {t('footer.rights')}</p>
+          <p>&copy; {new Date().getFullYear()} Branding Consulting. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>
