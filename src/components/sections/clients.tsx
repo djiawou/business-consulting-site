@@ -14,12 +14,17 @@ import {
   CardHeader,
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Star } from 'lucide-react';
+import { Star, Lightbulb, Rocket, Network, Mountain, GitMerge } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
 
 
 const partners = [
-  'Innovate Corp', 'QuantumLeap', 'Stellar Solutions', 'Nexus Group', 'Vertex Inc.', 'Synergy Systems'
+  { name: 'Innovate Corp', icon: <Lightbulb className="w-16 h-16 text-muted-foreground" /> },
+  { name: 'QuantumLeap', icon: <Rocket className="w-16 h-16 text-muted-foreground" /> },
+  { name: 'Stellar Solutions', icon: <Star className="w-16 h-16 text-muted-foreground" /> },
+  { name: 'Nexus Group', icon: <Network className="w-16 h-16 text-muted-foreground" /> },
+  { name: 'Vertex Inc.', icon: <Mountain className="w-16 h-16 text-muted-foreground" /> },
+  { name: 'Synergy Systems', icon: <GitMerge className="w-16 h-16 text-muted-foreground" /> }
 ];
 
 export default function Clients() {
@@ -69,8 +74,8 @@ export default function Clients() {
             {partners.map((partner, index) => (
               <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/5">
                 <div className="p-1">
-                  <div className="flex aspect-video items-center justify-center p-6 bg-secondary rounded-lg">
-                    <span className="text-xl font-semibold text-muted-foreground">{partner}</span>
+                  <div className="flex aspect-video items-center justify-center p-6 bg-secondary rounded-lg grayscale hover:grayscale-0 transition-all duration-300" title={partner.name}>
+                    {partner.icon}
                   </div>
                 </div>
               </CarouselItem>
