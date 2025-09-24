@@ -21,16 +21,16 @@ import Image from 'next/image';
 
 
 const partners = [
-    { name: 'Innovate Corp', logo: '/logos/logo1.png' },
-    { name: 'QuantumLeap', logo: '/logos/logo2.png' },
-    { name: 'Stellar Solutions', logo: '/logos/logo3.png' },
-    { name: 'Nexus Group', logo: '/logos/logo4.png' },
-    { name: 'Vertex Inc.', logo: '/logos/logo5.png' },
-    { name: 'Synergy Systems', logo: '/logos/logo6.png' },
-    { name: 'GlobalTrust', logo: '/logos/logo7.png' },
-    { name: 'Pinnacle Corp', logo: '/logos/logo8.png' },
-    { name: 'Zenith Solutions', logo: '/logos/logo9.png' },
-    { name: 'FusionWorks', logo: '/logos/logo10.png' }
+    { name: 'Innovate Corp', logo: '/logos/innovate-corp.png' },
+    { name: 'QuantumLeap', logo: '/logos/quantumleap.jpeg' },
+    { name: 'Stellar Solutions', logo: '/logos/stellar-solutions.jpeg' },
+    { name: 'Nexus Group', logo: '/logos/nexus-group.png' },
+    { name: 'Vertex Inc.', logo: '/logos/vertex-inc.png' },
+    { name: 'Synergy Systems', logo: '/logos/synergy-systems.jpeg' },
+    { name: 'GlobalTrust', logo: '/logos/globaltrust.png' },
+    { name: 'Pinnacle Corp', logo: '/logos/pinnacle-corp.jpeg' },
+    { name: 'Zenith Solutions', logo: '/logos/zenith-solutions.png' },
+    { name: 'FusionWorks', logo: '/logos/fusionworks.png' }
   ];
 
 export default function Clients() {
