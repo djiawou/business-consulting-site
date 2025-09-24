@@ -17,7 +17,7 @@ export default function ClientLayout({
   const { language } = useTranslation();
 
   return (
-    <html lang={language} className="!scroll-smooth">
+    <html lang={language} className="!scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

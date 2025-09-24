@@ -3,9 +3,6 @@ import type { Metadata } from 'next';
 import { Playfair_Display, Open_Sans } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
 import { LanguageProvider } from '@/context/language-context';
 import ClientLayout from '@/components/layout/client-layout';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -32,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <LanguageProvider>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <LanguageProvider>
         <ClientLayout
           className={cn(
             'min-h-screen bg-background font-body antialiased',
@@ -48,7 +45,7 @@ export default function RootLayout({
         >
           {children}
         </ClientLayout>
-      </ThemeProvider>
-    </LanguageProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
