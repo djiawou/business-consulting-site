@@ -58,6 +58,13 @@ export default function Clients() {
       text: t('clients.testimonials.2.text'),
       rating: 5,
     },
+    {
+      name: 'Laura Chen',
+      title: 'Marketing Director, Nexus Group',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NTg3MDgyNTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      text: t('clients.testimonials.1.text'),
+      rating: 4,
+    }
   ];
 
   return (
@@ -103,32 +110,43 @@ export default function Clients() {
             <div className="text-center mb-12 md:mb-16">
                 <h3 className="text-2xl md:text-3xl font-headline font-bold">{t('clients.testimonialsTitle')}</h3>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Carousel
+                opts={{ align: 'start', loop: true }}
+                className="w-full max-w-4xl mx-auto"
+            >
+                <CarouselContent>
                 {testimonials.map((testimonial, index) => (
-                     <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
-                        <CardHeader className="flex-row items-center gap-4">
-                             <Avatar className="w-16 h-16">
-                                <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                                <AvatarFallback>{testimonial.name.substring(0,2)}</AvatarFallback>
-                            </Avatar>
-                            <div>
-                                <p className="font-bold text-lg">{testimonial.name}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <p className="text-muted-foreground italic">"{testimonial.text}"</p>
-                        </CardContent>
-                        <CardFooter>
-                            <div className="flex gap-1">
-                                {Array(testimonial.rating).fill(0).map((_, i) => (
-                                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                                ))}
-                            </div>
-                        </CardFooter>
-                    </Card>
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                         <div className="p-4 h-full">
+                            <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                                <CardHeader className="flex-row items-center gap-4">
+                                    <Avatar className="w-16 h-16">
+                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                        <AvatarFallback>{testimonial.name.substring(0,2)}</AvatarFallback>
+                                    </Avatar>
+                                    <div>
+                                        <p className="font-bold text-lg">{testimonial.name}</p>
+                                        <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="flex-grow">
+                                    <p className="text-muted-foreground italic">"{testimonial.text}"</p>
+                                </CardContent>
+                                <CardFooter>
+                                    <div className="flex gap-1">
+                                        {Array(testimonial.rating).fill(0).map((_, i) => (
+                                            <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                                        ))}
+                                    </div>
+                                </CardFooter>
+                            </Card>
+                         </div>
+                    </CarouselItem>
                 ))}
-            </div>
+                </CarouselContent>
+                <CarouselPrevious className="hidden sm:flex" />
+                <CarouselNext className="hidden sm:flex" />
+            </Carousel>
         </div>
       </div>
     </section>
