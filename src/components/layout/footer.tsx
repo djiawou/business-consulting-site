@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
+              <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8" />
               <span className="text-2xl font-bold font-headline text-primary">
                 Branding Consulting
               </span>

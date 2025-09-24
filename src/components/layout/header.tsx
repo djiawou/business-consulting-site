@@ -72,7 +72,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
+          <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8" />
           <span className="text-2xl font-bold font-headline text-primary">
             Branding Consulting
           </span>
