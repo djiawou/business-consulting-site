@@ -14,7 +14,6 @@ const navLinks = [
   { href: '#services', label: 'Services' },
   { href: '#clients', label: 'Clients' },
   { href: '#contact', label: 'Contact' },
-  { href: '/image-generator', label: 'Outils IA' },
 ];
 
 export default function Header() {

@@ -44,7 +44,6 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               <li><Link href="#about" className="text-base text-muted-foreground hover:text-primary">À Propos</Link></li>
               <li><Link href="#clients" className="text-base text-muted-foreground hover:text-primary">Clients</Link></li>
-              <li><Link href="/image-generator" className="text-base text-muted-foreground hover:text-primary">Outils IA</Link></li>
             </ul>
           </div>
           <div>
