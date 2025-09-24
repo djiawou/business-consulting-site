@@ -56,45 +56,47 @@ export default function Services() {
             {t('services.subtitle')}
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 [perspective:1000px]">
           {services.map((service, index) => {
             const serviceImage = PlaceHolderImages.find((img) => img.id === service.id);
 
             return (
-              <Card key={service.id} className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl h-80">
-                
-                <div className="absolute inset-0 bg-white transition-opacity duration-500 group-hover:opacity-0">
-                  {serviceImage ? (
-                    <Image
-                      src={serviceImage.imageUrl}
-                      alt={serviceImage.description}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={serviceImage.imageHint}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  ) : <div className="h-full w-full bg-muted" />}
-                   <div className="absolute inset-0 bg-black/30" />
-                  <div className="absolute bottom-0 left-0 p-6 flex justify-between w-full items-end">
-                    <h3 className="text-2xl font-bold font-headline text-white">{service.title}</h3>
-                    <span className="text-5xl font-bold font-headline text-white/50">
-                        {String(index + 1).padStart(2, '0')}
-                    </span>
-                  </div>
-                </div>
+                <div key={service.id} className="group h-80">
+                    <Card className="relative h-full w-full rounded-lg shadow-lg transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        {/* Front of the card */}
+                        <div className="absolute inset-0 w-full h-full [backface-visibility:hidden]">
+                            {serviceImage ? (
+                                <Image
+                                src={serviceImage.imageUrl}
+                                alt={serviceImage.description}
+                                fill
+                                className="object-cover rounded-lg"
+                                data-ai-hint={serviceImage.imageHint}
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                />
+                            ) : <div className="h-full w-full bg-muted rounded-lg" />}
+                            <div className="absolute inset-0 bg-black/30 rounded-lg" />
+                            <div className="absolute bottom-0 left-0 p-6 flex justify-between w-full items-end">
+                                <h3 className="text-2xl font-bold font-headline text-white">{service.title}</h3>
+                                <span className="text-5xl font-bold font-headline text-white/50">
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
+                            </div>
+                        </div>
 
-                
-                <div className="absolute inset-0 bg-primary text-primary-foreground p-6 flex flex-col justify-center items-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                   <span className="absolute bottom-4 right-4 text-8xl font-bold font-headline text-white/10">
-                        {String(index + 1).padStart(2, '0')}
-                    </span>
-                  <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
-                  <p className="text-primary-foreground/90 mb-4 font-headline">{service.description}</p>
-                   <a href="#contact" className="mt-auto flex items-center gap-2 text-sm font-semibold text-green-400 hover:underline">
-                      Voir plus <ArrowRight className="w-5 h-5 text-green-400"/>
-                   </a>
-                </div>
-              </Card>
+                        {/* Back of the card */}
+                        <div className="absolute inset-0 w-full h-full bg-primary text-primary-foreground p-6 flex flex-col justify-center items-center text-center [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-lg">
+                            <span className="absolute bottom-4 right-4 text-8xl font-bold font-headline text-white/10">
+                                {String(index + 1).padStart(2, '0')}
+                            </span>
+                            <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
+                            <p className="text-primary-foreground/90 mb-4">{service.description}</p>
+                            <a href="#contact" className="mt-auto flex items-center gap-2 text-sm font-semibold text-accent hover:underline">
+                                Voir plus <ArrowRight className="w-5 h-5"/>
+                            </a>
+                        </div>
+                    </Card>
+              </div>
             );
           })}
         </div>
