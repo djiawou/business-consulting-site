@@ -1,7 +1,7 @@
 
 'use client';
 import ImageGeneratorForm from "@/components/image-generator-form";
-import { useTranslation } from "@/hooks/use-translation";
+import { useTranslation } from "@/context/language-context";
 
 export default function ImageGeneratorPage() {
   const { t } = useTranslation();

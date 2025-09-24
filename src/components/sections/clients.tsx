@@ -16,7 +16,7 @@ import {
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
-import { useTranslation } from '@/hooks/use-translation';
+import { useTranslation } from '@/context/language-context';
 import Image from 'next/image';
 
 
@@ -31,7 +31,7 @@ const partners = [
     { name: 'Pinnacle Corp', logo: '/logos/pinnacle-corp.jpeg' },
     { name: 'Zenith Solutions', logo: '/logos/zenith-solutions.png' },
     { name: 'FusionWorks', logo: '/logos/fusionworks.png' }
-  ];
+];
 
 export default function Clients() {
   const { t } = useTranslation();
@@ -61,11 +61,11 @@ export default function Clients() {
   ];
 
   return (
-    <section id="clients" className="py-24">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">{t('clients.title')}</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+    <section id="clients" className="py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{t('clients.title')}</h2>
+          <p className="mt-4 text-md md:text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('clients.subtitle')}
           </p>
         </div>
@@ -78,15 +78,16 @@ export default function Clients() {
         >
           <CarouselContent>
             {partners.map((partner, index) => (
-              <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/5">
+              <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
                 <div className="p-1">
-                  <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105" title={partner.name}>
-                    <div className="relative w-full h-16">
+                  <div className="flex aspect-video items-center justify-center p-4 sm:p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105" title={partner.name}>
+                    <div className="relative w-full h-12 sm:h-16">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
                         fill
                         className="object-contain"
+                        sizes="(max-width: 640px) 30vw, (max-width: 768px) 20vw, 15vw"
                       />
                     </div>
                   </div>
@@ -94,15 +95,15 @@ export default function Clients() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
         </Carousel>
 
-        <div className="mt-24">
-            <div className="text-center mb-16">
-                <h3 className="text-3xl font-headline font-bold">{t('clients.testimonialsTitle')}</h3>
+        <div className="mt-16 md:mt-24">
+            <div className="text-center mb-12 md:mb-16">
+                <h3 className="text-2xl md:text-3xl font-headline font-bold">{t('clients.testimonialsTitle')}</h3>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
                      <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
                         <CardHeader className="flex-row items-center gap-4">

@@ -24,7 +24,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import { submitContactForm } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Spinner } from '@/components/ui/spinner';
-import { useTranslation } from '@/hooks/use-translation';
+import { useTranslation } from '@/context/language-context';
 
 
 export default function Contact() {
@@ -87,21 +87,21 @@ export default function Contact() {
   }, [state, toast, form]);
 
   return (
-    <section id="contact" className="py-24 bg-secondary">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">{t('contact.title')}</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+    <section id="contact" className="py-16 md:py-24 bg-secondary">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{t('contact.title')}</h2>
+          <p className="mt-4 text-md md:text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('contact.subtitle')}
           </p>
         </div>
-        <Card>
+        <Card className="overflow-hidden">
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2">
-              <div className="p-8 md:p-12">
+              <div className="p-6 md:p-8 lg:p-12">
                 <h3 className="text-2xl font-bold font-headline mb-6">{t('contact.form.title')}</h3>
                 <Form {...form}>
-                  <form action={formAction} className="space-y-6">
+                  <form action={formAction} className="space-y-4 md:space-y-6">
                     <input type="hidden" name="lang" value={language} />
                     <FormField
                       control={form.control}
@@ -149,7 +149,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>{t('contact.form.message')}</FormLabel>
                           <FormControl>
-                            <Textarea placeholder={t('contact.form.message_placeholder')} {...field} rows={5} />
+                            <Textarea placeholder={t('contact.form.message_placeholder')} {...field} rows={4} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -161,33 +161,34 @@ export default function Contact() {
                   </form>
                 </Form>
               </div>
-              <div className="bg-primary text-primary-foreground p-8 md:p-12 flex flex-col justify-between rounded-r-lg">
+              <div className="bg-primary text-primary-foreground p-6 md:p-8 lg:p-12 flex flex-col justify-between">
                 <div>
                   <h3 className="text-2xl font-bold font-headline mb-6">{t('contact.details.title')}</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
-                      <MapPin className="w-6 h-6" />
+                  <div className="space-y-4 text-base">
+                    <div className="flex items-start gap-4">
+                      <MapPin className="w-6 h-6 shrink-0 mt-1" />
                       <span>123 Rue du Commerce, Bureau 100, Paris, 75001</span>
                     </div>
                     <div className="flex items-center gap-4">
-                      <Phone className="w-6 h-6" />
+                      <Phone className="w-6 h-6 shrink-0" />
                       <span>(123) 456-7890</span>
                     </div>
                     <div className="flex items-center gap-4">
-                      <Mail className="w-6 h-6" />
+                      <Mail className="w-6 h-6 shrink-0" />
                       <span>contact@businessconsulting.com</span>
                     </div>
                   </div>
                 </div>
                 {mapImage && (
                   <div className="mt-8 rounded-lg overflow-hidden aspect-video relative">
-                     <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                     <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <Image
                             src={mapImage.imageUrl}
                             alt={mapImage.description}
                             fill
                             className="object-cover"
                             data-ai-hint={mapImage.imageHint}
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                      </a>
                   </div>

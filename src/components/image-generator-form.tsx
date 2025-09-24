@@ -6,7 +6,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { generateCorporateImage } from '@/ai/flows/generate-corporate-image';
-import { useTranslation } from '@/hooks/use-translation';
+import { useTranslation } from '@/context/language-context';
 
 import { Button } from '@/components/ui/button';
 import {

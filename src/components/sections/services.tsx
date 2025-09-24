@@ -6,7 +6,7 @@ import {
   Card,
 } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { useTranslation } from '@/hooks/use-translation';
+import { useTranslation } from '@/context/language-context';
 import { ArrowRight } from 'lucide-react';
 
 
@@ -48,15 +48,15 @@ export default function Services() {
 
 
   return (
-    <section id="services" className="py-24 bg-secondary">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-headline font-bold text-primary">{t('services.title')}</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+    <section id="services" className="py-16 md:py-24 bg-secondary">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{t('services.title')}</h2>
+          <p className="mt-4 text-md md:text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('services.subtitle')}
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const serviceImage = PlaceHolderImages.find((img) => img.id === service.id);
 
@@ -71,6 +71,7 @@ export default function Services() {
                       fill
                       className="object-cover"
                       data-ai-hint={serviceImage.imageHint}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   ) : <div className="h-full w-full bg-muted" />}
                    <div className="absolute inset-0 bg-black/30" />
@@ -89,7 +90,7 @@ export default function Services() {
                     </span>
                   <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
                   <p className="text-primary-foreground/90 mb-4 font-headline">{service.description}</p>
-                   <a href="#" className="mt-auto flex items-center gap-2 text-sm font-semibold text-green-400 hover:underline" onClick={(e) => e.preventDefault()}>
+                   <a href="#contact" className="mt-auto flex items-center gap-2 text-sm font-semibold text-green-400 hover:underline">
                       Voir plus <ArrowRight className="w-5 h-5 text-green-400"/>
                    </a>
                 </div>

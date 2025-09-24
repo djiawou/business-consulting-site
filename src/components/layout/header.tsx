@@ -13,7 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { useTranslation } from '@/hooks/use-translation';
+import { useTranslation } from '@/context/language-context';
 import { ThemeToggle } from '../ui/theme-toggle';
 
 // SVG for France Flag
@@ -43,7 +43,7 @@ const UKFlag = () => (
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, setLanguage, language } = useTranslation();
+  const { t, setLanguage } = useTranslation();
 
   const navLinks = [
     { href: '#about', label: t('header.about') },
@@ -72,30 +72,34 @@ export default function Header() {
         isScrolled ? 'shadow-md' : ''
       )}
     >
-      <div className="container mx-auto flex h-20 items-center justify-between">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logos/branding-consulting.jpg" alt="Business Consulting Logo" width={32} height={32} />
-          <span className="text-2xl font-bold font-headline text-primary">
+          <span className="text-xl md:text-2xl font-bold font-headline text-primary">
             Business Consulting
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className="font-medium text-foreground/80 transition-colors hover:text-primary"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 md:gap-2">
           <ThemeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Languages className="h-6 w-6" />
+                <Languages className="h-5 w-5 md:h-6 md:w-6" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -110,7 +114,7 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button onClick={toggleMenu} variant="ghost" size="icon">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -118,14 +122,18 @@ export default function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-sm">
-          <nav className="flex flex-col items-center gap-4 py-4">
+        <div className="lg:hidden bg-background/95 backdrop-blur-sm absolute top-20 left-0 w-full">
+          <nav className="flex flex-col items-center gap-4 py-4 border-t">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {link.label}
               </Link>

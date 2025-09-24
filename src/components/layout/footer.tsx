@@ -2,7 +2,7 @@
 'use client'
 import Link from 'next/link';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
-import { useTranslation } from '@/hooks/use-translation';
+import { useTranslation } from '@/context/language-context';
 import Image from 'next/image';
 
 export default function Footer() {
