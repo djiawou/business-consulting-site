@@ -50,6 +50,7 @@ export default function Header() {
     { href: '#presentation', label: t('header.presentation') },
     { href: '#expertise', label: t('header.expertise') },
     { href: '#services', label: t('header.services') },
+    { href: '#realisations', label: t('header.realisations') },
     { href: '#events', label: t('header.events') },
     { href: '#clients', label: t('header.clients') },
     { href: '#contact', label: t('header.contact') },
