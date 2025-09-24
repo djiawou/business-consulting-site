@@ -84,6 +84,9 @@ export default function Services() {
 
                 
                 <div className="absolute inset-0 bg-primary text-primary-foreground p-6 flex flex-col justify-center items-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                   <span className="absolute bottom-4 right-4 text-8xl font-bold font-headline text-white/10">
+                        {String(index + 1).padStart(2, '0')}
+                    </span>
                   <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
                   <p className="text-primary-foreground/90 mb-4">{service.description}</p>
                    <a href="#" className="mt-auto flex items-center gap-2 text-sm font-semibold text-green-400 hover:underline" onClick={(e) => e.preventDefault()}>
