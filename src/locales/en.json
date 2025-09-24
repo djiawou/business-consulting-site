@@ -56,7 +56,7 @@
         },
         "tagline": "OUR SAP EXPERTISE",
         "title_new": "SAP Outsourcing and Offshoring",
-        "description_new": "Apex Insights has technical experts with over 15 years of experience in implementing SAP solution architectures, system administration, and a pool of seasoned developers to assist you in your technical projects.",
+        "description_new": "Business Consulting has technical experts with over 15 years of experience in implementing SAP solution architectures, system administration, and a pool of seasoned developers to assist you in your technical projects.",
         "points": {
             "implementation": "SAP Implementation",
             "migration": "SAP Migration and Updates",
@@ -109,8 +109,8 @@
         "subtitle": "We are proud to partner with a diverse range of clients who trust us to deliver excellence.",
         "testimonialsTitle": "What Our Clients Say",
         "testimonials": [
-            { "text": "Apex Insights transformed our business. Their strategic advice was a game-changer, leading to a 40% increase in revenue." },
-            { "text": "The professionalism and deep expertise of the Apex team are unmatched. They delivered results beyond our expectations." },
+            { "text": "Business Consulting transformed our business. Their strategic advice was a game-changer, leading to a 40% increase in revenue." },
+            { "text": "The professionalism and deep expertise of the team are unmatched. They delivered results beyond our expectations." },
             { "text": "Their digital transformation roadmap was brilliant. We've streamlined our operations and significantly improved customer satisfaction." }
         ]
     },

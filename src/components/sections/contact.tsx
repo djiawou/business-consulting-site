@@ -176,7 +176,7 @@ export default function Contact() {
                     </div>
                     <div className="flex items-center gap-4">
                       <Mail className="w-6 h-6" />
-                      <span>contact@apexinsights.com</span>
+                      <span>contact@businessconsulting.com</span>
                     </div>
                   </div>
                 </div>

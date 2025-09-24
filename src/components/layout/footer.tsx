@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/logos/branding-consulting.jpg" alt="Business Consulting Logo" width={32} height={32} className="h-8 w-8" />
+              <Image src="/logos/branding-consulting.jpg" alt="Business Consulting Logo" width={32} height={32} />
               <span className="text-2xl font-bold font-headline text-primary">
                 Business Consulting
               </span>
@@ -54,7 +54,7 @@ export default function Footer() {
             <div className="mt-4 space-y-2 text-base text-muted-foreground">
                 <p>123 Rue du Commerce, Bureau 100</p>
                 <p>Paris, 75001</p>
-                <p>contact@apexinsights.com</p>
+                <p>contact@businessconsulting.com</p>
                 <p>(123) 456-7890</p>
             </div>
           </div>
