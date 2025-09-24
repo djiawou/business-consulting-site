@@ -12,10 +12,10 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="overflow-hidden bg-background">
+    <section id="about" className="bg-background py-24">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 gap-0 items-center">
-          <div className="h-full min-h-[400px] md:min-h-0 relative">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-square rounded-lg overflow-hidden">
             {aboutImage && (
                 <Image
                     src={aboutImage.imageUrl}
@@ -26,7 +26,7 @@ export default function About() {
                 />
             )}
           </div>
-          <div className="py-24 pl-8">
+          <div className="">
             <h2 className="text-4xl font-headline font-bold text-primary mb-6">
               {t('about.title_new')}
             </h2>
