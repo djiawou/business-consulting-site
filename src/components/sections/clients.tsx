@@ -14,17 +14,18 @@ import {
   CardHeader,
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Star, Lightbulb, Rocket, Network, Mountain, GitMerge } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
+import Image from 'next/image';
 
 
 const partners = [
-  { name: 'Innovate Corp', icon: <Lightbulb className="w-16 h-16 text-muted-foreground" /> },
-  { name: 'QuantumLeap', icon: <Rocket className="w-16 h-16 text-muted-foreground" /> },
-  { name: 'Stellar Solutions', icon: <Star className="w-16 h-16 text-muted-foreground" /> },
-  { name: 'Nexus Group', icon: <Network className="w-16 h-16 text-muted-foreground" /> },
-  { name: 'Vertex Inc.', icon: <Mountain className="w-16 h-16 text-muted-foreground" /> },
-  { name: 'Synergy Systems', icon: <GitMerge className="w-16 h-16 text-muted-foreground" /> }
+  { name: 'Innovate Corp', logo: '/logos/innovate-corp.png' },
+  { name: 'QuantumLeap', logo: '/logos/quantumleap.png' },
+  { name: 'Stellar Solutions', logo: '/logos/stellar-solutions.png' },
+  { name: 'Nexus Group', logo: '/logos/nexus-group.png' },
+  { name: 'Vertex Inc.', logo: '/logos/vertex-inc.png' },
+  { name: 'Synergy Systems', logo: '/logos/synergy-systems.png' }
 ];
 
 export default function Clients() {
@@ -75,7 +76,14 @@ export default function Clients() {
               <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/5">
                 <div className="p-1">
                   <div className="flex aspect-video items-center justify-center p-6 bg-secondary rounded-lg grayscale hover:grayscale-0 transition-all duration-300" title={partner.name}>
-                    {partner.icon}
+                    <div className="relative w-32 h-16">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
