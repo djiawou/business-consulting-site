@@ -108,6 +108,16 @@
             }
         }
     },
+    "realisations": {
+        "title": "Nos réalisations",
+        "subtitle": "Nos résultats parlent d'eux-mêmes. Nous sommes fiers des résultats concrets que nous avons livrés à nos clients au fil des ans.",
+        "stats": {
+            "clients": "Clients Actifs",
+            "projects": "Projets Terminés",
+            "team": "Experts dans l'équipe",
+            "years": "Années d'expérience"
+        }
+    },
     "clients": {
         "title": "Approuvé par les leaders de l'industrie",
         "subtitle": "Nous sommes fiers de nous associer à un large éventail de clients qui nous font confiance pour fournir l'excellence.",

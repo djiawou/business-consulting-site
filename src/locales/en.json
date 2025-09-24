@@ -108,6 +108,16 @@
             }
         }
     },
+    "realisations": {
+        "title": "Our Achievements",
+        "subtitle": "Our track record speaks for itself. We are proud of the tangible results we have delivered for our clients over the years.",
+        "stats": {
+            "clients": "Active Clients",
+            "projects": "Completed Projects",
+            "team": "Expert Team Members",
+            "years": "Years of Experience"
+        }
+    },
     "clients": {
         "title": "Trusted by Industry Leaders",
         "subtitle": "We are proud to partner with a diverse range of clients who trust us to deliver excellence.",
