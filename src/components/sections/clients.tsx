@@ -22,11 +22,11 @@ import Image from 'next/image';
 
 const partners = [
   { name: 'Innovate Corp', logo: '/logos/innovate-corp.png' },
-  { name: 'QuantumLeap', logo: '/logos/quantumleap.png' },
-  { name: 'Stellar Solutions', logo: '/logos/stellar-solutions.png' },
+  { name: 'QuantumLeap', logo: '/logos/quantumleap.jpeg' },
+  { name: 'Stellar Solutions', logo: '/logos/stellar-solutions.jpeg' },
   { name: 'Nexus Group', logo: '/logos/nexus-group.png' },
   { name: 'Vertex Inc.', logo: '/logos/vertex-inc.png' },
-  { name: 'Synergy Systems', logo: '/logos/synergy-systems.png' }
+  { name: 'Synergy Systems', logo: '/logos/synergy-systems.jpeg' }
 ];
 
 export default function Clients() {
@@ -76,8 +76,8 @@ export default function Clients() {
             {partners.map((partner, index) => (
               <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/5">
                 <div className="p-1">
-                  <div className="flex aspect-video items-center justify-center p-6 bg-secondary rounded-lg grayscale hover:grayscale-0 transition-all duration-300" title={partner.name}>
-                    <div className="relative w-32 h-16">
+                  <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105" title={partner.name}>
+                    <div className="relative w-full h-16">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
