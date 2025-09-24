@@ -12,10 +12,21 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="overflow-hidden">
+    <section id="about" className="overflow-hidden bg-background">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-0 items-center">
-          <div className="py-24 pr-8">
+          <div className="h-full min-h-[400px] md:min-h-0 relative">
+            {aboutImage && (
+                <Image
+                    src={aboutImage.imageUrl}
+                    alt={aboutImage.description}
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-105"
+                    data-ai-hint={aboutImage.imageHint}
+                />
+            )}
+          </div>
+          <div className="py-24 pl-8">
             <h2 className="text-4xl font-headline font-bold text-primary mb-6">
               {t('about.title_new')}
             </h2>
@@ -30,17 +41,6 @@ export default function About() {
                     {t('about.contact_button')} <ArrowRight />
                 </Link>
             </Button>
-          </div>
-          <div className="h-full min-h-[400px] md:min-h-0 relative">
-            {aboutImage && (
-                <Image
-                    src={aboutImage.imageUrl}
-                    alt={aboutImage.description}
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-105"
-                    data-ai-hint={aboutImage.imageHint}
-                />
-            )}
           </div>
         </div>
       </div>
