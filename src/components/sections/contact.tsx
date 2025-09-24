@@ -5,8 +5,7 @@ import Image from 'next/image';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
-import { useFormState } from 'react-dom';
-import { useEffect } from 'react';
+import { useActionState, useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -38,7 +37,7 @@ export default function Contact() {
   };
 
   const mapImage = PlaceHolderImages.find((img) => img.id === 'contact-map');
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
   const formSchema = z.object({
