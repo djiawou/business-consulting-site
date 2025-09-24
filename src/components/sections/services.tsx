@@ -87,7 +87,7 @@ export default function Services() {
                   <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
                   <p className="text-primary-foreground/90 mb-4">{service.description}</p>
                    <a href="#" className="mt-auto flex items-center gap-2 text-sm font-semibold hover:underline" onClick={(e) => e.preventDefault()}>
-                      Voir plus <ArrowDown className="w-4 h-4"/>
+                      Voir plus <ArrowDown className="w-5 h-5"/>
                    </a>
                 </div>
               </Card>
@@ -98,4 +98,3 @@ export default function Services() {
     </section>
   );
 }
-
