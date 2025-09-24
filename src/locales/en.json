@@ -2,10 +2,13 @@
 {
     "header": {
         "about": "About",
+        "presentation": "Presentation",
         "expertise": "Expertise",
         "services": "Services",
+        "events": "Events",
         "clients": "Clients",
-        "contact": "Contact"
+        "contact": "Contact",
+        "image_generator": "Image Gen"
     },
     "footer": {
         "tagline": "Unlocking Potential, Driving Growth.",

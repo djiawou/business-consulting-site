@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Languages } from 'lucide-react';
+import { Menu, X, Languages, Image as ImageIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -47,8 +47,10 @@ export default function Header() {
 
   const navLinks = [
     { href: '#about', label: t('header.about') },
+    { href: '#presentation', label: t('header.presentation') },
     { href: '#expertise', label: t('header.expertise') },
     { href: '#services', label: t('header.services') },
+    { href: '#events', label: t('header.events') },
     { href: '#clients', label: t('header.clients') },
     { href: '#contact', label: t('header.contact') },
   ];
@@ -79,12 +81,12 @@ export default function Header() {
             Business Consulting
           </span>
         </Link>
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="font-medium text-foreground/80 transition-colors hover:text-primary text-sm"
               onClick={(e) => {
                 e.preventDefault();
                 document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
@@ -93,6 +95,12 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+            <Link
+                href="/image-generator"
+                className="font-medium text-foreground/80 transition-colors hover:text-primary text-sm flex items-center gap-1"
+            >
+                <ImageIcon className="w-4 h-4" /> {t('header.image_generator')}
+            </Link>
         </nav>
         <div className="flex items-center gap-1 md:gap-2">
           <ThemeToggle />
@@ -138,6 +146,13 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+             <Link
+                href="/image-generator"
+                className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary flex items-center gap-2"
+                 onClick={() => setIsMenuOpen(false)}
+            >
+                <ImageIcon className="w-5 h-5" /> {t('header.image_generator')}
+            </Link>
           </nav>
         </div>
       )}

@@ -2,10 +2,13 @@
 {
     "header": {
         "about": "À Propos",
+        "presentation": "Présentation",
         "expertise": "Expertise",
         "services": "Services",
+        "events": "Événements",
         "clients": "Clients",
-        "contact": "Contact"
+        "contact": "Contact",
+        "image_generator": "Gén. Image"
     },
     "footer": {
         "tagline": "Libérer le potentiel, stimuler la croissance.",
