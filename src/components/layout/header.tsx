@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Languages } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Logo } from '../logo';
@@ -92,7 +92,7 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Languages className="h-6 w-6" />
+                <Globe className="h-6 w-6" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
