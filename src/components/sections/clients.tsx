@@ -102,8 +102,8 @@ export default function Clients() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
+          <CarouselPrevious className="flex -left-4" />
+          <CarouselNext className="flex -right-4" />
         </Carousel>
 
         <div className="mt-16 md:mt-24">
@@ -144,8 +144,8 @@ export default function Clients() {
                     </CarouselItem>
                 ))}
                 </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex" />
-                <CarouselNext className="hidden sm:flex" />
+                <CarouselPrevious className="flex -left-4" />
+                <CarouselNext className="flex -right-4" />
             </Carousel>
         </div>
       </div>
