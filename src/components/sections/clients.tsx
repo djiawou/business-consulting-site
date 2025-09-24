@@ -26,7 +26,11 @@ const partners = [
   { name: 'Stellar Solutions', logo: '/logos/stellar-solutions.jpeg' },
   { name: 'Nexus Group', logo: '/logos/nexus-group.png' },
   { name: 'Vertex Inc.', logo: '/logos/vertex-inc.png' },
-  { name: 'Synergy Systems', logo: '/logos/synergy-systems.jpeg' }
+  { name: 'Synergy Systems', logo: '/logos/synergy-systems.jpeg' },
+  { name: 'GlobalTrust', logo: '/logos/globaltrust.png' },
+  { name: 'Pinnacle Corp', logo: '/logos/pinnacle-corp.png' },
+  { name: 'Zenith Solutions', logo: '/logos/zenith-solutions.png' },
+  { name: 'FusionWorks', logo: '/logos/fusionworks.png' }
 ];
 
 export default function Clients() {
