@@ -1,41 +1,43 @@
 
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   Card,
   CardContent,
 } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight } from 'lucide-react';
 
 const services = [
-  {
-    id: 'service-sap-migration',
-    title: 'Migration SAP vers le Cloud',
-    description: 'Accélérez la migration vers le cloud avec notre expertise de conseil SAP pour atteindre l\'excellence opérationnelle.',
-    isFeatured: true,
-  },
-  {
-    id: 'service-sap-expertise',
-    title: 'Expertise SAP',
-  },
-  {
-    id: 'service-support',
-    title: 'Assistance et Support',
-  },
-  {
-    id: 'service-training-new',
-    title: 'Formation',
-  },
-  {
-    id: 'service-strategy',
-    title: 'Conseils et Stratégie d\'entreprise',
-  },
-  {
-    id: 'service-digital-transformation',
-    title: 'Transformation Digitale',
-  },
-];
+    {
+      id: 'service-sap-migration',
+      title: 'Migration SAP vers le Cloud',
+      description: 'Migration transparente de votre environnement SAP vers le cloud pour plus de flexibilité, de performance et une réduction des coûts. Nous assurons une transition sécurisée et optimisée.',
+    },
+    {
+      id: 'service-sap-expertise',
+      title: 'Expertise SAP',
+      description: 'Nos consultants certifiés SAP optimisent vos modules existants, implémentent de nouvelles fonctionnalités et assurent la performance de votre écosystème SAP.',
+    },
+    {
+      id: 'service-support',
+      title: 'Assistance et Support',
+      description: 'Un support technique et fonctionnel réactif pour garantir la continuité de vos opérations. Nous offrons une assistance 24/7 pour résoudre rapidement tous vos incidents.',
+    },
+    {
+      id: 'service-training-new',
+      title: 'Formation',
+      description: 'Programmes de formation sur mesure pour vos équipes afin de maximiser l\'adoption des outils et d\'améliorer la productivité. Sessions en ligne ou sur site.',
+    },
+    {
+      id: 'service-strategy',
+      title: 'Conseils et Stratégie d\'entreprise',
+      description: 'Nous vous aidons à définir une vision claire et une feuille de route stratégique pour aligner votre technologie sur vos objectifs commerciaux et stimuler la croissance.',
+    },
+    {
+      id: 'service-digital-transformation',
+      title: 'Transformation Digitale',
+      description: 'Accompagnement de A à Z dans votre transformation numérique, de l\'audit initial à la mise en œuvre de solutions innovantes pour digitaliser vos processus métier.',
+    },
+  ];
 
 export default function Services() {
   return (
@@ -48,53 +50,32 @@ export default function Services() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
+          {services.map((service) => {
             const serviceImage = PlaceHolderImages.find((img) => img.id === service.id);
 
-            if (service.isFeatured) {
-              return (
-                <Card key={service.id} className="text-left group overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col bg-primary text-primary-foreground p-8">
-                  <div className="flex-grow">
-                    <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
-                    <p className="text-primary-foreground/80">{service.description}</p>
-                  </div>
-                  <div className="flex justify-between items-end mt-6">
-                    <Link href="#" className="flex items-center font-semibold hover:underline">
-                      VOIR PLUS <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                    <div className="text-8xl font-bold text-primary-foreground/20 leading-none">
-                      0{index + 1}
-                    </div>
-                  </div>
-                </Card>
-              );
-            }
-
             return (
-              <Card key={service.id} className="text-center group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative">
-                <CardContent className="p-0">
+              <Card key={service.id} className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl h-80">
+                {/* Initial State */}
+                <div className="absolute inset-0 bg-white transition-opacity duration-500 group-hover:opacity-0">
                   {serviceImage ? (
-                    <div className="relative h-64">
-                       <Image
-                        src={serviceImage.imageUrl}
-                        alt={serviceImage.description}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={serviceImage.imageHint}
-                      />
-                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
-                    </div>
-                  ) : (
-                    <div className="relative h-64 bg-muted flex items-center justify-center">
-                        <p className="text-muted-foreground">Ajoutez votre image</p>
-                    </div>
-                  )}
-                </CardContent>
-                <div className="absolute inset-0 flex flex-col justify-end items-start p-6 text-white">
-                  <div className="text-8xl font-bold text-white/20 leading-none -mb-4">
-                    0{index + 1}
+                    <Image
+                      src={serviceImage.imageUrl}
+                      alt={serviceImage.description}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={serviceImage.imageHint}
+                    />
+                  ) : <div className="h-full w-full bg-muted" />}
+                   <div className="absolute inset-0 bg-black/30" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <h3 className="text-2xl font-bold font-headline text-white">{service.title}</h3>
                   </div>
-                  <h3 className="text-2xl font-bold font-headline">{service.title}</h3>
+                </div>
+
+                {/* Hover State */}
+                <div className="absolute inset-0 bg-primary text-primary-foreground p-6 flex flex-col justify-center items-center text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
+                  <p className="text-primary-foreground/90">{service.description}</p>
                 </div>
               </Card>
             );

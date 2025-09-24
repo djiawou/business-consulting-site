@@ -19,15 +19,21 @@
       "imageHint": "city map"
     },
     {
+      "id": "service-sap-migration",
+      "description": "Cloud servers and data streams, representing SAP migration to the cloud.",
+      "imageUrl": "https://images.unsplash.com/photo-1671543307135-10844f5e9a55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbG91ZCUyMG1pZ3JhdGlvbnxlbnwwfHx8fDE3NTg2OTI3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud migration"
+    },
+    {
       "id": "service-sap-expertise",
       "description": "A person analyzing data on a screen, representing SAP expertise.",
-      "imageUrl": "https://images.unsplash.com/photo-1600469984476-c713650f1b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGF0YSUyMGFuYWx5c2lzfGVufDB8fHx8MTc1ODY4MzA5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzU4NjgzMDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data analysis"
     },
     {
       "id": "service-support",
       "description": "A support agent with a headset helping a customer.",
-      "imageUrl": "https://images.unsplash.com/photo-1715635845783-a184542d95e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjdXN0b21lciUyMHN1cHBvcnR8ZW58MHx8fHwxNzU4NTkwMzIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560264418-c4445382edbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3VzdG9tZXIlMjBzdXBwb3J0fGVufDB8fHx8MTc1ODU5MDMyMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "customer support"
     },
     {
@@ -39,14 +45,14 @@
     {
       "id": "service-strategy",
       "description": "Two people discussing business strategy over coffee.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU4NjkyNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1654588592496-fd32d5d7abc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU4NjkyNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business discussion"
     },
     {
       "id": "service-digital-transformation",
       "description": "A person using a VR headset, symbolizing digital transformation.",
-      "imageUrl": "https://images.unsplash.com/photo-1657734240334-b13dfc3f6c91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxWUiUyMGhlYWRzZXR8ZW58MHx8fHwxNzU4NjA1MDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "VR headset"
+      "imageUrl": "https://images.unsplash.com/photo-1637789594401-5a0dac0d3e36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkaWdpdGFsJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU4NjkyMjI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital abstract"
     }
   ]
 }
