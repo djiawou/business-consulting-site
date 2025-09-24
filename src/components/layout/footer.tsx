@@ -13,9 +13,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} className="h-8 w-8" />
+              <Image src="/logos/branding-consulting.jpg" alt="Business Consulting Logo" width={32} height={32} className="h-8 w-8" />
               <span className="text-2xl font-bold font-headline text-primary">
-                Branding Consulting
+                Business Consulting
               </span>
             </Link>
             <p className="text-muted-foreground">
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-base text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Branding Consulting. {t('footer.rights')}</p>
+          <p>&copy; {new Date().getFullYear()} Business Consulting. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

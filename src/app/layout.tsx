@@ -21,7 +21,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Branding Consulting',
+  title: 'Business Consulting',
   description: 'Libérer le potentiel, stimuler la croissance. | Unlocking Potential, Driving Growth.',
 };
 

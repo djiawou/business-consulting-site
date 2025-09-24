@@ -72,9 +72,9 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logos/branding-consulting.jpg" alt="Branding Consulting Logo" width={32} height={32} />
+          <Image src="/logos/branding-consulting.jpg" alt="Business Consulting Logo" width={32} height={32} />
           <span className="text-2xl font-bold font-headline text-primary">
-            Branding Consulting
+            Business Consulting
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
