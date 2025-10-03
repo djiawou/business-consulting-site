@@ -181,12 +181,13 @@ export default function Contact() {
                 </div>
                 {mapImage && (
                   <div className="mt-8 rounded-lg overflow-hidden aspect-video relative">
-                     <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                     <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="block w-full h-full" aria-label="View location on Google Maps">
                         <Image
                             src={mapImage.imageUrl}
                             alt={mapImage.description}
                             fill
                             className="object-cover"
+                            unoptimized
                             data-ai-hint={mapImage.imageHint}
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />

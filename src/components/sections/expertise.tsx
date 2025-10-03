@@ -44,6 +44,7 @@ export default function Expertise() {
                     alt={expertiseImage.description}
                     fill
                     className="object-contain"
+                    unoptimized
                     data-ai-hint={expertiseImage.imageHint}
                     sizes="(max-width: 768px) 100vw, 50vw"
                 />

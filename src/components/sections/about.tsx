@@ -23,6 +23,7 @@ export default function About() {
                     alt={aboutImage.description}
                     fill
                     className="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-105"
+                    unoptimized
                     data-ai-hint={aboutImage.imageHint}
                     sizes="(max-width: 768px) 100vw, 50vw"
                 />

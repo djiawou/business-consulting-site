@@ -121,7 +121,10 @@ export default function Clients() {
                             <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
                                 <CardHeader className="flex-row items-center gap-4">
                                     <Avatar className="w-16 h-16">
-                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                        <AvatarImage 
+                                          src={testimonial.avatar} 
+                                          alt={testimonial.name}
+                                        />
                                         <AvatarFallback>{testimonial.name.substring(0,2)}</AvatarFallback>
                                     </Avatar>
                                     <div>
